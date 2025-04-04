@@ -1,0 +1,8 @@
+node_modules
+
+# Prevent committing generated lib directory.
+lib
+
+.pnpm*
+
+

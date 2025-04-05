@@ -37,9 +37,7 @@ async function gitDiff() {
 
     if (file) {
       if (line.match(ADDITION_REGEX)) {
-        if (line.includes("package.json")) {
-          stagedAdditionFilePaths.push(file);
-        }
+        stagedAdditionFilePaths.push(file);
       }
     }
   }

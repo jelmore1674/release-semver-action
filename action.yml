@@ -1,0 +1,39 @@
+name: Release Action
+description: A github action that creates a release, by automatically handling the semantic versioning.
+author: Justin Elmore
+
+inputs:
+  change_type:
+    description: The semantic version change type. Accepted values are major, minor, patch
+    required: false
+    default: patch
+
+  version:
+    description: Override the version by passing in the desired version.
+    required: false
+
+  bump_package_json:
+    description: Bump the version in `package.json`.
+    required: false
+    default: "false"
+
+  commitsh:
+    description: Specifies the commitish value that determines where the Git tag is created from. Can be any branch or sha.
+    required: false
+
+  name:
+    description: The name of the release. Defaults to the tag.
+    required: false
+
+  body:
+    description: The contents of your release. Optional, if  not set, it will generate the release notes.
+    required: false
+
+  token:
+    description: The secret value from your GITHUB_TOKEN or another token to access the GitHub API. Defaults to the token at `github.token`
+    required: true
+    default: ${{ github.token }}
+
+runs:
+  using: node20
+  main: ./dist/index.js

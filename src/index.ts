@@ -24,12 +24,9 @@ async function run() {
   }
 
   if (updatePackageJson) {
-    setPackageJsonVersion(releaseType, version);
-
-    commitWithApi("Update package.json");
-
     if (neq(version, getVersionFromPackageJson())) {
-      warning("Your release version and package.json are out of sync.");
+      setPackageJsonVersion(releaseType, version);
+      commitWithApi("Update package.json");
     }
   }
 

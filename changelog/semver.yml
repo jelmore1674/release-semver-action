@@ -1,0 +1,7 @@
+changed:
+  feature:
+    - Update `commitWithApi` to return the headoid.
+
+fixed:
+  bug:
+    - Typo of `commitish` in the action input.

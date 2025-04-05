@@ -1,4 +1,5 @@
 import { getInput, setFailed, warning } from "@actions/core";
+import { context } from "@actions/github";
 import { exit } from "node:process";
 import { clean, inc, neq } from "semver";
 import { commitWithApi } from "./commitAndPush";
@@ -11,6 +12,10 @@ async function run() {
   const releaseType = getInput("release_type", { required: false }) as ReleaseType;
   const tagName = getInput("tag_name", { required: false });
   let version = clean(tagName);
+
+  let commitish = context.ref;
+
+  console.log({ ref: context.ref });
 
   if (!tagName) {
     const latestVersion = await getLatestVersion();
@@ -26,9 +31,11 @@ async function run() {
   if (updatePackageJson) {
     if (neq(version, getVersionFromPackageJson())) {
       setPackageJsonVersion(releaseType, version);
-      commitWithApi("Update package.json");
+      commitish = await commitWithApi("Update package.json");
     }
   }
+
+  console.log({ commitish });
 
   await createRelease(version);
 }

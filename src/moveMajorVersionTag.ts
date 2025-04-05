@@ -28,7 +28,7 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
   console.info(`Latest SHA: ${latestCommit.data.sha}`);
 
   try {
-    await restClient.git.updateRef({
+    await requestClient("PATCH /repos/{owner}/{repo}/git/refs/{ref}", {
       owner,
       repo,
       ref: `refs/tags/${majorVersion}`,

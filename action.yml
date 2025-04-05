@@ -22,7 +22,7 @@ inputs:
     required: false
     default: "false"
 
-  commitsh:
+  commitish:
     description: Specifies the commitish value that determines where the Git tag is created from. Can be any branch or sha.
     required: false
 

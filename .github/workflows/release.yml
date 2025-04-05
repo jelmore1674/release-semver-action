@@ -6,13 +6,13 @@ on:
       tag:
         description: "Release Tag"
         type: "string"
-        default: "v"
-        required: true
+        required: false
 
       release_type:
         description: The semver release type
         type: choice
         default: patch
+        required: true
         options:
           - patch
           - minor

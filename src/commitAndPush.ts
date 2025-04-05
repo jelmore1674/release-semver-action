@@ -82,6 +82,8 @@ async function gitBranch() {
  * Commit using the GitHub GraphQL api.
  *
  * @param commitMessage - the commit message.
+ *
+ * @returns the expectedHeadOid
  */
 async function commitWithApi(commitMessage: string) {
   const branch = await gitBranch();
@@ -120,6 +122,8 @@ async function commitWithApi(commitMessage: string) {
         fileDeletions,
       },
     );
+
+    return expectedHeadOid;
   } catch (error) {
     let errorMessage = "Unable to create commit.";
 

@@ -1,4 +1,4 @@
-import { getInput, setFailed } from "@actions/core";
+import { debug, getInput, setFailed } from "@actions/core";
 import { exit } from "node:process";
 import { clean, inc, neq } from "semver";
 import { commitWithApi } from "./commitAndPush";
@@ -10,7 +10,10 @@ async function run() {
   const updatePackageJson = Boolean(getInput("update_package_json", { required: false }));
   const releaseType = getInput("release_type", { required: false }) as ReleaseType;
   const tagName = getInput("tag_name", { required: false });
-  let targetCommittish = getInput("committish", { required: false });
+
+  debug(`updatePackageJsonInput: ${updatePackageJson}`);
+  debug(`releaseTypeInput: ${releaseType}`);
+  debug(`tagNameInput: ${tagName}`);
 
   let version = clean(tagName);
 
@@ -25,22 +28,22 @@ async function run() {
     exit(1);
   }
 
+  debug(`version: ${version}`);
+
   if (updatePackageJson) {
     if (neq(version, getVersionFromPackageJson())) {
       setPackageJsonVersion(releaseType, version);
 
-      const commit = await commitWithApi("Update package.json");
+      const isSuccessful = await commitWithApi("Update package.json");
 
-      if (!commit) {
+      if (!isSuccessful) {
         setFailed("Unable to update package.json");
         exit(1);
       }
-
-      targetCommittish = commit;
     }
   }
 
-  await createRelease(version, targetCommittish);
+  await createRelease(version);
 }
 
 run();

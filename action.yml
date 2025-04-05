@@ -8,6 +8,10 @@ inputs:
     required: false
     default: patch
 
+  tag_name:
+    description: Override the version by passing in the desired version.
+    required: false
+
   git_tag_prefix:
     description: The prefix for your git tags.
     default: "v"
@@ -18,16 +22,8 @@ inputs:
     required: false
     default: "false"
 
-  tag_name:
-    description: Override the version by passing in the desired version.
-    required: false
-
   release_name:
     description: The name of the release. Defaults to the tag.
-    required: false
-
-  committish:
-    description: Specifies the committish value that determines where the Git tag is created from. Can be any branch or sha.
     required: false
 
   body:

@@ -1,0 +1,16 @@
+name: Enforce Changelog
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review, labeled, unlabeled]
+
+jobs:
+  enforce-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: jelmore1674/build-changelog/enforcer@main
+        with:
+          skip_labels: ops,maintenance,docs

@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release Tag"
+        type: "string"
+        default: "v"
+        required: true
+
+permissions:
+  # Give the default GITHUB_TOKEN write permission to commit and push the
+  # added or changed files to the repository.
+  contents: write
+  pull-requests: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set Version for Unreleased
+        id: changelog
+        uses: jelmore1674/build-changelog@main
+        with:
+          version: ${{ inputs.tag }}
+
+      - name: Get Latest Sha
+        id: sha
+        run: |
+          git pull origin HEAD
+          echo "sha=$(git rev-parse HEAD)"  >> "$GITHUB_OUTPUT"
+
+      - name: Create Release
+        id: create_release
+        uses: ./
+        env:
+          NOTES: ${{ steps.changelog.outputs.notes }}
+        with:
+          commitish: ${{ steps.sha.outputs.sha }}
+          tag_name: ${{ inputs.tag }}
+          release_name: ${{ inputs.tag }}
+          body: ${{ env.NOTES }}

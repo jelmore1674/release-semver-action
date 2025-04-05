@@ -1,0 +1,83 @@
+name: Build & Test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "src/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "**/build.yml"
+
+permissions:
+  # Give the default GITHUB_TOKEN write permission to commit and push the
+  # added or changed files to the repository.
+  contents: write
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+      - name: Install Packages.
+        run: pnpm i --frozen-lockfile
+      # - name: Lint
+      #   run: pnpm lint
+      - name: Build
+        run: pnpm build
+
+      - name: Check for changes
+        id: dirty
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - if: ${{ steps.dirty.outputs.changes == 'true' }}
+        name: Load secret
+        id: load-op
+        uses: 1password/load-secrets-action@v2
+        with:
+          # Export loaded secrets as environment variables
+          export-env: false
+        env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          GPG_KEY: op://Actions/shared/GPG_KEY
+          GPG_PASSPHRASE: op://Actions/shared/GPG_PASSPHRASE
+
+      - if: ${{ steps.dirty.outputs.changes == 'true' }}
+        name: decode gpg
+        id: decode
+        run: |
+          KEY=$(echo "${{ steps.load-op.outputs.GPG_KEY }}" | base64 -d) && \
+          cat >> $GITHUB_OUTPUT <<EOF
+          GPG<<STRING
+          $KEY
+          STRING
+          EOF
+
+      - if: ${{ steps.dirty.outputs.changes == 'true' }}
+        name: "Import GPG key"
+        id: import-gpg
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ steps.decode.outputs.GPG }}
+          passphrase: "${{ steps.load-op.outputs.GPG_PASSPHRASE }}"
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+
+      - if: ${{ steps.dirty.outputs.changes == 'true' }}
+        name: "Commit and push changes"
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_author: "${{ steps.import-gpg.outputs.name }} <${{ steps.import-gpg.outputs.email }}>"
+          commit_user_name: ${{ steps.import-gpg.outputs.name }}
+          commit_user_email: ${{ steps.import-gpg.outputs.email }}
+          commit_message: "Updated distributed action."

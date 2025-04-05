@@ -31,7 +31,12 @@ async function run() {
   if (updatePackageJson) {
     if (neq(version, getVersionFromPackageJson())) {
       setPackageJsonVersion(releaseType, version);
-      commitish = await commitWithApi("Update package.json");
+      let commit = await commitWithApi("Update package.json");
+      if (!commit) {
+        setFailed("Unable to update package.json");
+        exit(1);
+      }
+      commitish = commit;
     }
   }
 

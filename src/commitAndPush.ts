@@ -43,6 +43,7 @@ async function gitDiff() {
   }
 
   const fileAdditions = stagedAdditionFilePaths.reduce((acc, path) => {
+    console.log({ path });
     const file = readFileSync(path, { encoding: "utf8" });
     acc.push({ path, contents: Buffer.from(file).toString("base64") });
     return acc;

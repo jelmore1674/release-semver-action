@@ -1,8 +1,39 @@
-import { execSync } from "node:child_process";
+import { getInput, setFailed, warning } from "@actions/core";
+import { exit } from "node:process";
+import { clean, inc, neq } from "semver";
+import { commitWithApi } from "./commitAndPush";
+import { createRelease } from "./createRelease";
+import { getLatestVersion } from "./getLatestVersion";
+import { getVersionFromPackageJson, type ReleaseType, setPackageJsonVersion } from "./npmVersion";
 
-function run() {
-  const newVersion = execSync("npm version patch", { encoding: "utf8" });
-  console.log({ newVersion });
+async function run() {
+  const updatePackageJson = Boolean(getInput("update_package_json", { required: false }));
+  const releaseType = getInput("release_type", { required: false }) as ReleaseType;
+  const tagName = getInput("tag_name", { required: false });
+  let version = clean(tagName);
+
+  if (!tagName) {
+    const latestVersion = await getLatestVersion();
+
+    version = inc(latestVersion, releaseType);
+  }
+
+  if (!version) {
+    setFailed("Unable to validate version.");
+    exit(1);
+  }
+
+  if (updatePackageJson) {
+    setPackageJsonVersion(releaseType, version);
+
+    commitWithApi("Update package.json");
+
+    if (neq(version, getVersionFromPackageJson())) {
+      warning("Your release version and package.json are out of sync.");
+    }
+  }
+
+  await createRelease(version);
 }
 
 run();

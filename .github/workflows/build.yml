@@ -74,6 +74,9 @@ jobs:
           git_commit_gpgsign: true
 
       - if: ${{ steps.dirty.outputs.changes == 'true' }}
+        run: git pull origin HEAD
+
+      - if: ${{ steps.dirty.outputs.changes == 'true' }}
         name: "Commit and push changes"
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

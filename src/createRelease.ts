@@ -11,7 +11,7 @@ async function createRelease(version: string, target_commitish: string) {
     const gitTagPrefix = getInput("git_tag_prefix", { required: true });
     const generate_release_notes = Boolean(body);
 
-    console.info({ body });
+    console.info({ body, generate_release_notes });
 
     const tag_name = `${gitTagPrefix}${version}`;
 
@@ -20,9 +20,9 @@ async function createRelease(version: string, target_commitish: string) {
       repo,
       tag_name,
       name: tag_name,
-      body,
       target_commitish,
       generate_release_notes,
+      ...(body && { body }),
     });
 
     const { data: { id, html_url, upload_url } } = createdRelease;

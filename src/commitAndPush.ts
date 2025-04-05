@@ -82,7 +82,7 @@ async function gitBranch() {
  *
  * @param commitMessage - the commit message.
  *
- * @returns the expectedHeadOid
+ * @returns the target branch
  */
 async function commitWithApi(commitMessage: string) {
   const branch = await gitBranch();
@@ -123,7 +123,7 @@ async function commitWithApi(commitMessage: string) {
         },
       );
 
-      return expectedHeadOid;
+      return branch;
     } catch (error) {
       let errorMessage = "Unable to create commit.";
 

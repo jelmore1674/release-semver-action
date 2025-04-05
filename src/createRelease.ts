@@ -3,14 +3,15 @@ import { context } from "@actions/github";
 import { exit } from "node:process";
 import { restClient } from "./github";
 
-async function createRelease(version: string) {
+async function createRelease(version: string, target_commitish: string) {
   try {
     const { owner, repo } = context.repo;
 
     const body = getInput("body", { required: false });
-    const target_commitish = getInput("commitish", { required: false });
     const gitTagPrefix = getInput("git_tag_prefix", { required: true });
     const generate_release_notes = Boolean(body);
+
+    console.info({ body });
 
     const tag_name = `${gitTagPrefix}${version}`;
 

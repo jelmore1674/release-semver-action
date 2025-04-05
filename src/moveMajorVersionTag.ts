@@ -25,6 +25,8 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
     ref: branch,
   });
 
+  console.info(`Latest SHA: ${latestCommit.data.sha}`);
+
   try {
     await restClient.git.updateRef({
       owner,
@@ -37,6 +39,8 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
     console.info(`Successfully moved the tag:\n\ntag: ${majorVersion}\nsha: ${latestCommit.data.sha}`);
   } catch (e) {
     console.info("Unable to update tag. Attempting to create the tag.");
+
+    console.info({ e });
 
     const response = await restClient.git.createRef({
       owner,

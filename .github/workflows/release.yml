@@ -34,6 +34,7 @@ jobs:
         id: changelog
         uses: jelmore1674/build-changelog@main
         with:
+          release_type: ${{ inputs.release_type }}
           version: ${{ inputs.tag }}
 
       - name: Create Release

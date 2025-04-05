@@ -38,12 +38,16 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
   } catch (e) {
     console.info("Unable to update tag. Attempting to create the tag.");
 
-    await restClient.git.createRef({
+    const response = await restClient.git.createRef({
       owner,
       repo,
       ref: `refs/tags/${majorVersion}`,
       sha: latestCommit.data.sha,
     });
+
+    if (response) {
+      return;
+    }
 
     setFailed(`Unable to update the ${majorVersion} tag`);
     exit(1);

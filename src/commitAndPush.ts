@@ -5,7 +5,7 @@ import { readFileSync } from "node:fs";
 import { exit } from "node:process";
 import { graphqlClient } from "./github";
 
-const ADDITION_REGEX = /^1 (M|A)\./;
+const ADDITION_REGEX = /^1 \.?(M|A)\.?/;
 
 /**
  * This is used for creating the type that will be sent to GitHub for file changes.

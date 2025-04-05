@@ -91,9 +91,10 @@ async function commitWithApi(commitMessage: string) {
 
   const { fileAdditions, fileDeletions } = await gitDiff();
 
-  try {
-    await graphqlClient(
-      `mutation($expectedHeadOid: GitObjectID!, $fileAdditions: [FileAddition!]!, $fileDeletions: [FileDeletion!]!) {
+  if (fileAdditions.length || fileDeletions.length) {
+    try {
+      await graphqlClient(
+        `mutation($expectedHeadOid: GitObjectID!, $fileAdditions: [FileAddition!]!, $fileDeletions: [FileDeletion!]!) {
           createCommitOnBranch(
             input: {
               branch: {
@@ -114,22 +115,23 @@ async function commitWithApi(commitMessage: string) {
             }
           }
         }`,
-      {
-        expectedHeadOid,
-        fileAdditions,
-        fileDeletions,
-      },
-    );
+        {
+          expectedHeadOid,
+          fileAdditions,
+          fileDeletions,
+        },
+      );
 
-    return expectedHeadOid;
-  } catch (error) {
-    let errorMessage = "Unable to create commit.";
+      return expectedHeadOid;
+    } catch (error) {
+      let errorMessage = "Unable to create commit.";
 
-    if (error instanceof Error) {
-      errorMessage = error.message;
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      }
+      setFailed(errorMessage);
+      exit(1);
     }
-    setFailed(errorMessage);
-    exit(1);
   }
 }
 

@@ -12,6 +12,11 @@ inputs:
     description: Override the version by passing in the desired version.
     required: false
 
+  move_major_version_tag:
+    description: Automate moving the major version tag.
+    required: false
+    default: "false"
+
   git_tag_prefix:
     description: The prefix for your git tags.
     default: "v"

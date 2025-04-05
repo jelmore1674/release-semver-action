@@ -6,5 +6,6 @@ const github = getOctokit(githubToken);
 
 const restClient = github.rest;
 const graphqlClient = github.graphql;
+const requestClient = github.request;
 
-export { graphqlClient, restClient };
+export { graphqlClient, requestClient, restClient };

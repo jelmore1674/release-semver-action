@@ -47,3 +47,4 @@ jobs:
           tag_name: ${{ steps.changelog.outputs.release_version || inputs.tag }}
           release_name: ${{ inputs.tag }}
           body: ${{ env.NOTES }}
+          move_major_version_tag: true

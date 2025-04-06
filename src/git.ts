@@ -3,6 +3,7 @@ import { getExecOutput } from "@actions/exec";
 import { readFileSync } from "node:fs";
 
 const ADDITION_REGEX = /^1 \.?(M|A)\.?/;
+const DELETION_REGEX = /^1 \.?D\.?/;
 
 /**
  * This is used for creating the type that will be sent to GitHub for file changes.
@@ -37,6 +38,10 @@ async function gitDiff() {
     if (file) {
       if (line.match(ADDITION_REGEX)) {
         stagedAdditionFilePaths.push(file);
+      }
+
+      if (line.match(DELETION_REGEX)) {
+        stagedDeletionFilePaths.push(file);
       }
     }
   }

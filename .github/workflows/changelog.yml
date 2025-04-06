@@ -1,13 +1,6 @@
 name: Changelog
 
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: "Release Version"
-        type: "string"
-        default: ""
-        required: false
   push:
     branches:
       - main
@@ -46,8 +39,8 @@ jobs:
           token: ${{ steps.get_workflow_token.outputs.token }}
 
       - name: Generate Changelog
-        uses: jelmore1674/build-changelog@main
+        uses: jelmore1674/build-changelog@v1
         with:
           show_author_full_name: true
-          commit_message: "Update Changelog [skip ci]."
+          commit_message: "Update Changelog."
           token: ${{ steps.get_workflow_token.outputs.token }}

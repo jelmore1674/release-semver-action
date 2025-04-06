@@ -62,23 +62,21 @@ jobs:
 
       - name: Set Version for Unreleased
         id: changelog
-        uses: jelmore1674/build-changelog@main
+        uses: jelmore1674/build-changelog@v1
         with:
           release_type: ${{ inputs.release_type }}
           version: ${{ inputs.tag }}
-          commit_message: "Update Changelog [skip ci]"
+          commit_message: "Update Changelog"
           token: ${{ steps.get_workflow_token.outputs.token }}
 
       - name: Create Release
         id: create_release
         uses: ./
-        env:
-          NOTES: ${{ steps.changelog.outputs.notes }}
         with:
           release_type: ${{ inputs.release_type }}
           tag_name: ${{ steps.changelog.outputs.release_version || inputs.tag }}
           release_name: ${{ inputs.release_name || inputs.tag }}
-          body: ${{ env.NOTES }}
+          body: ${{ steps.changelog.outputs.notes }}
           move_major_version_tag: ${{ inputs.move_major_version_tag }}
           update_package_json: ${{ inputs.update_package_json }}
           token: ${{ steps.get_workflow_token.outputs.token }}

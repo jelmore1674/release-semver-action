@@ -1,7 +1,7 @@
 {
   "name": "release-action",
   "author": "Justin Elmore",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Release Action",
   "main": "index.js",
   "scripts": {

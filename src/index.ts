@@ -6,10 +6,11 @@ import { createRelease } from "./createRelease";
 import { getLatestVersion } from "./getLatestVersion";
 import { moveMajorVersionTag } from "./moveMajorVersionTag";
 import { getVersionFromPackageJson, type ReleaseType, setPackageJsonVersion } from "./npmVersion";
+import { stringToBoolean } from "./utils";
 
 async function run() {
-  const updatePackageJson = Boolean(getInput("update_package_json", { required: false }));
-  const moveMajorVersion = Boolean(getInput("move_major_version_tag", { required: false }));
+  const updatePackageJson = stringToBoolean(getInput("update_package_json", { required: false }));
+  const moveMajorVersion = stringToBoolean(getInput("move_major_version_tag", { required: false }));
   const releaseType = getInput("release_type", { required: false }) as ReleaseType;
   const tagName = getInput("tag_name", { required: false });
   const gitTagPrefix = getInput("git_tag_prefix", { required: true });

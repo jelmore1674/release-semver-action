@@ -1,4 +1,4 @@
-import { debug, getInput, setFailed } from "@actions/core";
+import { debug, getInput, info, setFailed } from "@actions/core";
 import { exit } from "node:process";
 import { clean, inc, neq } from "semver";
 import { commitWithApi } from "./commitAndPush";
@@ -17,6 +17,9 @@ async function run() {
   debug(`updatePackageJsonInput: ${updatePackageJson}`);
   debug(`releaseTypeInput: ${releaseType}`);
   debug(`tagNameInput: ${tagName}`);
+
+  info(`updatePackageJsonInput: ${updatePackageJson}`);
+  info(`rawInput: ${getInput("update_package_json", { required: false })}`);
 
   let version = clean(tagName);
 
@@ -46,11 +49,11 @@ async function run() {
     }
   }
 
-  await createRelease(version);
-
   if (moveMajorVersion) {
     await moveMajorVersionTag(version, gitTagPrefix);
   }
+
+  await createRelease(version);
 }
 
 run();

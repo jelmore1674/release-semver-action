@@ -1,4 +1,4 @@
-import { setFailed } from "@actions/core";
+import { info, setFailed } from "@actions/core";
 import { context } from "@actions/github";
 import { exit } from "node:process";
 import { major } from "semver";
@@ -16,7 +16,7 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
   const rawMajorVersion = major(version);
   const majorVersion = `${gitTagPrefix}${rawMajorVersion}`;
 
-  console.info(`Updating the ${majorVersion} tag.`);
+  info(`Updating the ${majorVersion} tag.`);
 
   const branch = await gitBranch();
   const latestCommit = await requestClient("GET /repos/{owner}/{repo}/commits/{ref}", {
@@ -25,7 +25,7 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
     ref: branch,
   });
 
-  console.info(`Latest SHA: ${latestCommit.data.sha}`);
+  info(`Latest SHA: ${latestCommit.data.sha}`);
 
   try {
     await restClient.git.updateRef({
@@ -36,9 +36,9 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
       force: true,
     });
 
-    console.info(`Successfully moved the tag:\n\ntag: ${majorVersion}\nsha: ${latestCommit.data.sha}`);
+    info(`Successfully moved the tag:\n\ntag: ${majorVersion}\nsha: ${latestCommit.data.sha}`);
   } catch (e) {
-    console.info("Unable to update tag. Attempting to create the tag.");
+    info("Unable to update tag. Attempting to create the tag.");
 
     try {
       await restClient.git.createRef({

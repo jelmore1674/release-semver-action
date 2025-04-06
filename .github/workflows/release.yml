@@ -3,11 +3,6 @@ name: Release
 on:
   workflow_dispatch:
     inputs:
-      tag:
-        description: "Release Tag"
-        type: "string"
-        required: false
-
       release_type:
         description: The semver release type
         type: choice
@@ -17,6 +12,11 @@ on:
           - patch
           - minor
           - major
+
+      tag:
+        description: "Release Tag"
+        type: "string"
+        required: false
 
 permissions:
   # Give the default GITHUB_TOKEN write permission to commit and push the

@@ -8,19 +8,21 @@ import { graphqlClient } from "./github";
  * Commit using the GitHub GraphQL api.
  *
  * @param commitMessage - the commit message.
+ * @param skipCi - Add the [skip ci] to end of commit to prevent workflows from triggering.
  *
- * @returns the target branch
+ * @returns  if the api request isSuccessful.
  */
-async function commitWithApi(commitMessage: string) {
+async function commitWithApi(commitMessage: string, skipCi?: boolean) {
   const branch = await gitBranch();
   const repo = `${context.repo.owner}/${context.repo.repo}`;
+
+  const skippedCiCommitMessage = `${commitMessage} [skip ci]`;
 
   debug(`repo: ${repo}`);
 
   const expectedHeadOid = await getExpectedHeadOid(branch);
 
   const { fileAdditions, fileDeletions } = await gitDiff();
-
   if (fileAdditions.length > 0 || fileDeletions.length > 0) {
     try {
       await graphqlClient(
@@ -31,7 +33,7 @@ async function commitWithApi(commitMessage: string) {
                 repositoryNameWithOwner: "${repo}",
                 branchName: "${branch}"
               },
-              message: { headline: "${commitMessage}" },
+              message: { headline: "${skipCi ? skippedCiCommitMessage : commitMessage}" },
               fileChanges: {
                 additions: $fileAdditions,
                 deletions: $fileDeletions

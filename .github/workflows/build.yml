@@ -26,10 +26,12 @@ jobs:
           cache: "pnpm"
       - name: Install Packages.
         run: pnpm i --frozen-lockfile
-      # - name: Lint
-      #   run: pnpm lint
+      - name: Lint
+        run: pnpm lint
       - name: Build
         run: pnpm build
+
+      - uses: dprint/check@v2.2
 
       - name: Check for changes
         id: dirty

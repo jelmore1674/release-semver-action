@@ -1,7 +1,0 @@
-added:
-  feature:
-    - Support for committing delete files.
-
-changed:
-  commits:
-    - Removed [skip ci] flag from `package.json`.

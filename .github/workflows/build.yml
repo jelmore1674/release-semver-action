@@ -3,6 +3,9 @@ name: Build & Lint
 on:
   workflow_dispatch:
   push:
+    branches: ["**"]
+    tags-ignore:
+      - "**"
     paths:
       - "src/**"
       - "package.json"
@@ -47,10 +50,9 @@ jobs:
         run: pnpm i --frozen-lockfile
       - name: Lint
         run: pnpm lint
+      - uses: dprint/check@v2.2
       - name: Build
         run: pnpm build
-
-      - uses: dprint/check@v2.2
 
       - name: Check for changes
         id: dirty
@@ -83,13 +85,10 @@ jobs:
           git_commit_gpgsign: true
 
       - if: ${{ steps.dirty.outputs.changes == 'true' }}
-        run: git pull origin HEAD
-
-      - if: ${{ steps.dirty.outputs.changes == 'true' }}
         name: "Commit and push changes"
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_author: "${{ steps.import-gpg.outputs.name }} <${{ steps.import-gpg.outputs.email }}>"
           commit_user_name: ${{ steps.import-gpg.outputs.name }}
           commit_user_email: ${{ steps.import-gpg.outputs.email }}
-          commit_message: "Updated distributed action."
+          commit_message: "Updated distributed action. [skip ci]"

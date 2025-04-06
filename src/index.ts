@@ -11,6 +11,7 @@ import { stringToBoolean } from "./utils";
 async function run() {
   const updatePackageJson = stringToBoolean(getInput("update_package_json", { required: false }));
   const moveMajorVersion = stringToBoolean(getInput("move_major_version_tag", { required: false }));
+  const skipCi = stringToBoolean(getInput("skip_ci", { required: false }));
 
   const releaseType = getInput("release_type", { required: false }) as ReleaseType;
   const tagName = getInput("tag_name", { required: false });
@@ -39,7 +40,7 @@ async function run() {
     if (neq(version, getVersionFromPackageJson())) {
       setPackageJsonVersion(releaseType, version);
 
-      const isSuccessful = await commitWithApi("Update package.json [skip ci]");
+      const isSuccessful = await commitWithApi("Update package.json", skipCi);
 
       if (!isSuccessful) {
         setFailed("Unable to update package.json");

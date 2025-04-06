@@ -86,13 +86,10 @@ jobs:
           git_commit_gpgsign: true
 
       - if: ${{ steps.dirty.outputs.changes == 'true' }}
-        run: git pull origin HEAD
-
-      - if: ${{ steps.dirty.outputs.changes == 'true' }}
         name: "Commit and push changes"
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_author: "${{ steps.import-gpg.outputs.name }} <${{ steps.import-gpg.outputs.email }}>"
           commit_user_name: ${{ steps.import-gpg.outputs.name }}
           commit_user_email: ${{ steps.import-gpg.outputs.email }}
-          commit_message: "Updated distributed action."
+          commit_message: "Updated distributed action. [skip ci]"

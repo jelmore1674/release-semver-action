@@ -28,7 +28,7 @@ jobs:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
           GPG_KEY: op://Actions/shared/GPG_KEY
           GPG_PASSPHRASE: op://Actions/shared/GPG_PASSPHRASE
-          GH_APP_KEY: op://Actions/shared/GH_APP_KEY
+          GH_APP_KEY: "op://Actions/GH_APP_KEY/private key"
           APP_ID: op://Actions/shared/APP_ID
 
       - name: Get Token

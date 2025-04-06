@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: jelmore1674/build-changelog/enforcer@main
+      - uses: jelmore1674/build-changelog/enforcer@v1
         with:
           skip_labels: ops,maintenance,docs

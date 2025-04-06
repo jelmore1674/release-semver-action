@@ -45,12 +45,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Load secret
+        id: load-op
+        uses: 1password/load-secrets-action@v2
+        with:
+          # Export loaded secrets as environment variables
+          export-env: false
+        env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          GPG_KEY: op://Actions/shared/GPG_KEY
+          GPG_PASSPHRASE: op://Actions/shared/GPG_PASSPHRASE
+          GH_APP_KEY: "op://Actions/GH_APP_KEY/private key"
+          APP_ID: op://Actions/shared/APP_ID
+
       - name: Get Token
         id: get_workflow_token
         uses: peter-murray/workflow-application-token-action@v4
         with:
-          application_id: ${{ vars.APP_ID}}
-          application_private_key: ${{ secrets.GH_APP_KEY }}
+          application_id: ${{ steps.load-op.outputs.APP_ID }}
+          application_private_key: ${{ steps.load-op.outputs.GH_APP_KEY }}
           revoke_token: true
 
       - name: Set Version for Unreleased

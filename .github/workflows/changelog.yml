@@ -49,4 +49,5 @@ jobs:
         uses: jelmore1674/build-changelog@main
         with:
           show_author_full_name: true
+          commit_message: "Update Changelog [skip-ci]."
           token: ${{ steps.get_workflow_token.outputs.token }}

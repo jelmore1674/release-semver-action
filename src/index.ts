@@ -39,7 +39,7 @@ async function run() {
     if (neq(version, getVersionFromPackageJson())) {
       setPackageJsonVersion(releaseType, version);
 
-      const isSuccessful = await commitWithApi("Update package.json");
+      const isSuccessful = await commitWithApi("Update package.json [skip-ci]");
 
       if (!isSuccessful) {
         setFailed("Unable to update package.json");

@@ -66,6 +66,7 @@ jobs:
         with:
           release_type: ${{ inputs.release_type }}
           version: ${{ inputs.tag }}
+          commit_message: "Update Changelog [skip-ci]"
           token: ${{ steps.get_workflow_token.outputs.token }}
 
       - name: Create Release

@@ -13,9 +13,11 @@ async function createRelease(version: string) {
     const releaseName = getInput("release_name", { required: false });
     const gitTagPrefix = getInput("git_tag_prefix", { required: true });
 
+    // biome-ignore lint/style/useNamingConvention: this is the name of the variable passed to the api.
     const generate_release_notes = !body;
-
+    // biome-ignore lint/style/useNamingConvention: this is the name of the variable passed to the api.
     const tag_name = `${gitTagPrefix}${version}`;
+    // biome-ignore lint/style/useNamingConvention: this is the name of the variable passed to the api.
     const target_commitish = await gitBranch();
 
     debug(`bodyInput: ${body}`);

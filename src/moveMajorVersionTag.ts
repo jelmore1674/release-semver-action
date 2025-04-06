@@ -37,7 +37,7 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
     });
 
     info(`Successfully moved the tag:\n\ntag: ${majorVersion}\nsha: ${latestCommit.data.sha}`);
-  } catch (e) {
+  } catch (_error) {
     info("Unable to update tag. Attempting to create the tag.");
 
     try {
@@ -47,7 +47,7 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
         ref: `refs/tags/${majorVersion}`,
         sha: latestCommit.data.sha,
       });
-    } catch (e) {
+    } catch (_error) {
       setFailed(`Unable to update the ${majorVersion} tag`);
       exit(1);
     }

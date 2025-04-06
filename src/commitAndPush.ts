@@ -21,7 +21,7 @@ async function commitWithApi(commitMessage: string) {
 
   const { fileAdditions, fileDeletions } = await gitDiff();
 
-  if (fileAdditions.length || fileDeletions.length) {
+  if (fileAdditions.length > 0 || fileDeletions.length > 0) {
     try {
       await graphqlClient(
         `mutation($expectedHeadOid: GitObjectID!, $fileAdditions: [FileAddition!]!, $fileDeletions: [FileDeletion!]!) {

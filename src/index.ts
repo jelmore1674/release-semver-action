@@ -1,4 +1,4 @@
-import { debug, getInput, info, setFailed } from "@actions/core";
+import { debug, getInput, setFailed } from "@actions/core";
 import { exit } from "node:process";
 import { clean, inc, neq } from "semver";
 import { commitWithApi } from "./commitAndPush";
@@ -11,6 +11,7 @@ import { stringToBoolean } from "./utils";
 async function run() {
   const updatePackageJson = stringToBoolean(getInput("update_package_json", { required: false }));
   const moveMajorVersion = stringToBoolean(getInput("move_major_version_tag", { required: false }));
+
   const releaseType = getInput("release_type", { required: false }) as ReleaseType;
   const tagName = getInput("tag_name", { required: false });
   const gitTagPrefix = getInput("git_tag_prefix", { required: true });
@@ -18,9 +19,6 @@ async function run() {
   debug(`updatePackageJsonInput: ${updatePackageJson}`);
   debug(`releaseTypeInput: ${releaseType}`);
   debug(`tagNameInput: ${tagName}`);
-
-  info(`updatePackageJsonInput: ${updatePackageJson}`);
-  info(`rawInput: ${getInput("update_package_json", { required: false })}`);
 
   let version = clean(tagName);
 

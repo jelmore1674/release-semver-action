@@ -18,7 +18,18 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
+      - name: Get Token
+        id: get_workflow_token
+        uses: peter-murray/workflow-application-token-action@v4
+        with:
+          application_id: ${{ env.APP_ID}}
+          application_private_key: ${{ secrets.GH_APP_KEY }}
+          revoke_token: true
+
       - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.get_workflow_token.outputs.token }}
+
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:

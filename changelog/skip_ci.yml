@@ -1,0 +1,4 @@
+added:
+  feature:
+    - Input `skip_ci` to optionally, to optionally allow action to create other actions.
+    - Support to commit deleted files.

@@ -84,6 +84,11 @@ inputs:
     description: The contents of your release. Optional, if  not set, it will generate the release notes.
     required: false
 
+  skip_ci:
+    description: Add [skip ci] to the end of a commit to prevent actions from triggering.
+    default: 'true'
+    required: false
+
   token:
     description: The secret value from your GITHUB_TOKEN or another token to access the GitHub API. Defaults to the token at `github.token`
     required: true

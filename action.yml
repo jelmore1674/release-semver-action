@@ -1,4 +1,4 @@
-name: Release Action
+name: release-semver-action
 description: A github action that creates a release, by automatically handling the semantic versioning.
 author: Justin Elmore
 

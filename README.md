@@ -1,4 +1,4 @@
-# Release Action
+# Release Action.
 
 This actions creates a release, and helps manages the semantic version.
 

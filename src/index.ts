@@ -19,6 +19,7 @@ async function run() {
   debug(`updatePackageJsonInput: ${updatePackageJson}`);
   debug(`releaseTypeInput: ${releaseType}`);
   debug(`tagNameInput: ${tagName}`);
+  debug(`tagNameInput: ${tagName}`);
 
   let version = clean(tagName);
 

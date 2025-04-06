@@ -3,6 +3,8 @@ name: Build & Lint
 on:
   workflow_dispatch:
   push:
+    tags-ignore:
+      - "**"
     paths:
       - "src/**"
       - "package.json"

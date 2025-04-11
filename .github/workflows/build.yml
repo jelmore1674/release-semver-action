@@ -3,8 +3,7 @@ name: Build & Lint
 on:
   workflow_dispatch:
   push:
-    branches-ignore:
-      - main
+    branches: ["**"]
     tags-ignore:
       - "**"
     paths:

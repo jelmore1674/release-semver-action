@@ -94,12 +94,3 @@ inputs:
     required: true
     default: ${{ github.token }}
 ```
-
-> [!NOTE]
-> To update the `package.json` you must set `commit-hooks` and `git-tag-version`
-> in a `.npmrc` file in the repository.
->
-> ```.npmrc
-> `commit-hooks=false`
-> `git-tag-version=false`
-> ```

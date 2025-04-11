@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Optional `commit_message` input to customize commit message. ([#12](https://github.com/jelmore1674/release-semver-action/pull/12)) ([Justin Elmore](https://github.com/jelmore1674))
+- Flag when setting npm version so the `.npmrc` is no longer required. ([#13](https://github.com/jelmore1674/release-semver-action/pull/13)) ([Justin Elmore](https://github.com/jelmore1674))
 
 ### Removed
 

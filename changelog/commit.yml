@@ -1,7 +1,0 @@
-added:
-  feature:
-    - Optional `commit_message` input to customize commit message.
-
-removed:
-  feature:
-    - No longer commits `package.json` as a single commit.

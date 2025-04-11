@@ -15,6 +15,7 @@ async function run() {
   const releaseType = getInput("release_type", { required: false }) as ReleaseType;
   const tagName = getInput("tag_name", { required: false });
   const gitTagPrefix = getInput("git_tag_prefix", { required: true });
+  const commitMessage = getInput("commit_message", { required: false });
 
   debug(`updatePackageJsonInput: ${updatePackageJson}`);
   debug(`releaseTypeInput: ${releaseType}`);
@@ -38,14 +39,14 @@ async function run() {
   if (updatePackageJson) {
     if (neq(version, getVersionFromPackageJson())) {
       setPackageJsonVersion(releaseType, version);
-
-      const isSuccessful = await commitWithApi("Update package.json");
-
-      if (!isSuccessful) {
-        setFailed("Unable to update package.json");
-        exit(1);
-      }
     }
+  }
+
+  const isSuccessful = await commitWithApi(commitMessage.replace("<version>", version));
+
+  if (!isSuccessful) {
+    setFailed("Unable to update.");
+    exit(1);
   }
 
   if (moveMajorVersion) {

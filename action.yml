@@ -21,6 +21,11 @@ inputs:
     required: false
     default: "false"
 
+  commit_message:
+    description: The commit message.
+    required: false
+    default: "Bump version to <version>"
+
   git_tag_prefix:
     description: The prefix for your git tags.
     default: "v"

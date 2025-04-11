@@ -19,7 +19,8 @@ function getVersionFromPackageJson() {
  * @param [version] - Override the release type by setting the version directly.
  */
 function setPackageJsonVersion(releaseType: ReleaseType, version?: string | null) {
-  return execSync(`npm version ${version || releaseType}`, { encoding: "utf8" }).replace(/"/g, "");
+  return execSync(`npm version ${version || releaseType} --no-commit-hooks --no-git-tag-version`, { encoding: "utf8" })
+    .replace(/"/g, "");
 }
 
 export type { ReleaseType };

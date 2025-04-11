@@ -1,0 +1,3 @@
+added:
+  feature:
+    - Flag when setting npm version so the `.npmrc` is no longer required.

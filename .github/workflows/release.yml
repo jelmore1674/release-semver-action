@@ -22,7 +22,6 @@ on:
         description: The release name.
         type: string
         required: false
-
       update_package_json:
         description: Update the package.json version.
         type: boolean
@@ -64,8 +63,7 @@ jobs:
         with:
           release_type: ${{ inputs.release_type }}
           version: ${{ inputs.tag }}
-          commit_message: "Update Changelog"
-          token: ${{ steps.get_workflow_token.outputs.token }}
+          skip_commit: true
 
       - name: Create Release
         id: create_release

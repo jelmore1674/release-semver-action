@@ -4,6 +4,8 @@ This actions creates a release, and helps manages the semantic version.
 
 ## Usage
 
+Here is an example.
+
 ```yaml
 name: Release
 

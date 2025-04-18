@@ -14,3 +14,5 @@ jobs:
       - uses: jelmore1674/build-changelog/enforcer@v1
         with:
           skip_labels: ops,maintenance,docs
+          enable_dependabot: true
+          dependabot_label: dependencies

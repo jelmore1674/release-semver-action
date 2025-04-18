@@ -15,4 +15,4 @@ jobs:
         with:
           skip_labels: ops,maintenance,docs
           enable_dependabot: true
-          dependabot_label: dependencies
+          dependabot_labels: dependencies

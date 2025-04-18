@@ -15,5 +15,6 @@ updates:
       development-dependencies:
         dependency-type: "development"
     ignore:
-      - dependency-name:: "@types/node"
+      - dependency-name: "@types/node"
+        # Ignore patch updates for Node
         update-types: ["version-update:semver-patch"]

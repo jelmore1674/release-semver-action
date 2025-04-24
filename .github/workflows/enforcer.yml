@@ -45,6 +45,6 @@ jobs:
           enable_dependabot: true
           dependabot_labels: dependencies
           comment_on_pr: true
-          show_full_name: true
+          show_author_full_name: true
           custom_bot_name: jelmore-token-app[bot]
           token: ${{ steps.get_workflow_token.outputs.token }}

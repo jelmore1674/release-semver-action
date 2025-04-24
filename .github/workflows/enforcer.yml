@@ -15,6 +15,25 @@ jobs:
   enforce-changelog:
     runs-on: ubuntu-latest
     steps:
+      - name: Load secret
+        id: load-op
+        uses: 1password/load-secrets-action@v2
+        with:
+          # Export loaded secrets as environment variables
+          export-env: false
+        env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          GH_APP_KEY: "op://Actions/GH_APP_KEY/private key"
+          APP_ID: op://Actions/shared/APP_ID
+
+      - name: Get Token
+        id: get_workflow_token
+        uses: peter-murray/workflow-application-token-action@v4
+        with:
+          application_id: ${{ steps.load-op.outputs.APP_ID}}
+          application_private_key: ${{ steps.load-op.outputs.GH_APP_KEY }}
+          revoke_token: true
+
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
@@ -25,3 +44,7 @@ jobs:
           skip_labels: ops,maintenance,docs
           enable_dependabot: true
           dependabot_labels: dependencies
+          comment_on_pr: true
+          show_full_name: true
+          custom_bot_name: jelmore-token-app[bot]
+          token: ${{ steps.get_workflow_token.outputs.token }}

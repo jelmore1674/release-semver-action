@@ -14,6 +14,7 @@ describe("getLatestVersion", () => {
       .get(
         "/repos/jelmore1674/release-semver-action/releases/latest",
       )
+      // biome-ignore lint/style/useNamingConvention: api
       .reply(200, { tag_name: "1.0.1" });
 
     const result = await getLatestVersion();

@@ -4,6 +4,14 @@ import { moveMajorVersionTag } from ".";
 
 const sha = "6dcb09b5b57875f334f61aebed695e2e4193db5e";
 
+vi.mock("@jelmore1674/github-action-helpers", async () => {
+  const actual = await vi.importActual("@jelmore1674/github-action-helpers");
+  return {
+    ...actual,
+    getBranch: async () => "main",
+  };
+});
+
 describe("moveMajorVersionTag", () => {
   afterEach(() => {
     vi.resetAllMocks();

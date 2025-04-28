@@ -1,9 +1,9 @@
 import { info, setFailed } from "@actions/core";
 import { context } from "@actions/github";
+import { getBranch } from "@jelmore1674/github-action-helpers";
 import { exit } from "node:process";
 import { major } from "semver";
-import { gitBranch } from "./git";
-import { requestClient, restClient } from "./github";
+import { requestClient, restClient } from "../github";
 
 /**
  * Move the majorVersion tag
@@ -12,16 +12,14 @@ import { requestClient, restClient } from "./github";
  * @param gitTagPrefix- the git tag prefix
  */
 async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
-  const { repo, owner } = context.repo;
   const rawMajorVersion = major(version);
   const majorVersion = `${gitTagPrefix}${rawMajorVersion}`;
 
   info(`Updating the ${majorVersion} tag.`);
 
-  const branch = await gitBranch();
+  const branch = await getBranch();
   const latestCommit = await requestClient("GET /repos/{owner}/{repo}/commits/{ref}", {
-    owner,
-    repo,
+    ...context.repo,
     ref: branch,
   });
 
@@ -29,8 +27,7 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
 
   try {
     await restClient.git.updateRef({
-      owner,
-      repo,
+      ...context.repo,
       ref: `tags/${majorVersion}`,
       sha: latestCommit.data.sha,
       force: true,
@@ -42,8 +39,7 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
 
     try {
       await restClient.git.createRef({
-        owner,
-        repo,
+        ...context.repo,
         ref: `refs/tags/${majorVersion}`,
         sha: latestCommit.data.sha,
       });

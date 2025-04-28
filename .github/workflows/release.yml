@@ -57,20 +57,12 @@ jobs:
           application_private_key: ${{ steps.load-op.outputs.GH_APP_KEY }}
           revoke_token: true
 
-      - name: Set Version for Unreleased
-        id: changelog
-        uses: jelmore1674/build-changelog@v1
-        with:
-          release_type: ${{ inputs.release_type }}
-          version: ${{ inputs.tag }}
-          skip_commit: true
-
       - name: Create Release
         id: create_release
         uses: ./
         with:
           release_type: ${{ inputs.release_type }}
-          tag_name: ${{ steps.changelog.outputs.release_version || inputs.tag }}
+          tag_name: ${{ inputs.tag }}
           release_name: ${{ inputs.release_name || inputs.tag }}
           body: ${{ steps.changelog.outputs.notes }}
           move_major_version_tag: ${{ inputs.move_major_version_tag }}

@@ -1,14 +1,12 @@
 import { getInput, setFailed, setOutput } from "@actions/core";
 import { context } from "@actions/github";
+import { getBranch } from "@jelmore1674/github-action-helpers";
 import { debug } from "node:console";
 import { exit } from "node:process";
-import { gitBranch } from "./git";
-import { restClient } from "./github";
+import { restClient } from "../github";
 
-async function createRelease(version: string) {
+async function createRelease(version: string, changelogNotes?: string) {
   try {
-    const { owner, repo } = context.repo;
-
     const body = getInput("body", { required: false });
     const releaseName = getInput("release_name", { required: false });
     const gitTagPrefix = getInput("git_tag_prefix", { required: true });
@@ -18,7 +16,7 @@ async function createRelease(version: string) {
     // biome-ignore lint/style/useNamingConvention: this is the name of the variable passed to the api.
     const tag_name = `${gitTagPrefix}${version}`;
     // biome-ignore lint/style/useNamingConvention: this is the name of the variable passed to the api.
-    const target_commitish = await gitBranch();
+    const target_commitish = await getBranch();
 
     debug(`bodyInput: ${body}`);
     debug(`releaseNameInput: ${releaseName}`);
@@ -28,12 +26,11 @@ async function createRelease(version: string) {
     debug(`target_commitish: ${target_commitish}`);
 
     const createdRelease = await restClient.repos.createRelease({
-      owner,
-      repo,
+      ...context.repo,
       tag_name,
       name: releaseName || tag_name,
       target_commitish,
-      body,
+      body: body || changelogNotes,
       generate_release_notes,
     });
 

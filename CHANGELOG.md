@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - TBD
 
+### Added
+
+- Support to bump unreleased changes in changelog. [`fa97e97`](https://github.com/jelmore1674/release-semver-action/commit/fa97e97bd52fcfb8b0f1a375aff5f85ceb52819f) | [#17](https://github.com/jelmore1674/release-semver-action/issues/17), [#18](https://github.com/jelmore1674/release-semver-action/pull/18) | [Justin Elmore](https://github.com/jelmore1674)
+- Unit testing on api calls in the project. [`fa97e97`](https://github.com/jelmore1674/release-semver-action/commit/fa97e97bd52fcfb8b0f1a375aff5f85ceb52819f) | [#17](https://github.com/jelmore1674/release-semver-action/issues/17), [#18](https://github.com/jelmore1674/release-semver-action/pull/18) | [Justin Elmore](https://github.com/jelmore1674)
+
 ### Security
 
 - Updates `typescript` from 5.8.2 to 5.8.3 ([`12d6a70`](https://github.com/jelmore1674/release-semver-action/commit/12d6a7004b93089ed5acd89297ecf7f3c68396aa)) ([#15](https://github.com/jelmore1674/release-semver-action/pull/15)) ([dependabot](https://github.com/apps/dependabot))

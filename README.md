@@ -46,6 +46,7 @@ jobs:
           release_type: ${{ inputs.release_type }}
           tag_name: ${{ steps.changelog.outputs.release_version || inputs.tag }}
           release_name: ${{ inputs.tag }}
+          set_changelog_version: true
 ```
 
 The action will check your latest release, will increment the version from the semver release types.
@@ -66,22 +67,44 @@ inputs:
   move_major_version_tag:
     description: Automate moving the major version tag.
     required: false
-    default: 'false'
+    default: "false"
 
   commit_message:
-    description: The commit message.
+    description: |
+      The commit message. You can customize your message and use `$version` as a variable
+      of the version changes
     required: false
-    default: 'Bump version to <version>'
+    default: "Bump version to $version"
 
   git_tag_prefix:
     description: The prefix for your git tags.
-    default: 'v'
+    default: "v"
     required: true
+
+  show_git_tag_prefix:
+    description: Whether or not the versions show the git tag prefix in the changelog.
+    default: "false"
+    required: false
 
   update_package_json:
     description: Bump the version in `package.json`.
     required: false
-    default: 'false'
+    default: "false"
+
+  changelog_file:
+    description: Path to the changelog file.
+    default: "CHANGELOG.md"
+    required: false
+
+  set_changelog_version:
+    description: Bump unreleased changes in the changelog.
+    default: "false"
+    required: false
+
+  release_notes_from_changelog:
+    description: Use the latest version in the changelog to use as the release notes.
+    default: "false"
+    required: false
 
   release_name:
     description: The name of the release. Defaults to the tag.

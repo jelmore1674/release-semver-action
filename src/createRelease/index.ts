@@ -12,7 +12,7 @@ async function createRelease(version: string, changelogNotes?: string) {
     const gitTagPrefix = getInput("git_tag_prefix", { required: true });
 
     // biome-ignore lint/style/useNamingConvention: this is the name of the variable passed to the api.
-    const generate_release_notes = !body;
+    const generate_release_notes = !(body || changelogNotes);
     // biome-ignore lint/style/useNamingConvention: this is the name of the variable passed to the api.
     const tag_name = `${gitTagPrefix}${version}`;
     // biome-ignore lint/style/useNamingConvention: this is the name of the variable passed to the api.

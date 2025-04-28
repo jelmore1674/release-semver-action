@@ -1,0 +1,2 @@
+fixed:
+  - Prevent generated release notes from appearing when getting the release notes from the changelog.

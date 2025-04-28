@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased] - TBD
+
+### Fixed
+
+- Generated reference link to the updated version. [`08d737a`](https://github.com/jelmore1674/release-semver-action/commit/08d737a866076cd5458711bdbf8483ec5f36fe50) | [#19](https://github.com/jelmore1674/release-semver-action/pull/19) | [Justin Elmore](https://github.com/jelmore1674)
+
 ## [1.2.0] - 2025-04-28
 
 ### Added

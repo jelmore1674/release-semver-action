@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - TBD
+## [1.2.2] - 2025-04-28
 
 ### Fixed
 
@@ -53,6 +53,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Release_
 
+[1.2.2]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.2.2
 [1.2.1]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.2.1
 [1.2.0]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.2.0
 [1.1.0]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.1.0

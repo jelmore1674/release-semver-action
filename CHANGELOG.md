@@ -41,7 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Release_
 
-[1.2.0]: https://github.com/jelmore1674/release-semver-action/v1.2.0
+[1.2.0]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.2.0
 [1.1.0]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.1.0
 [1.0.1]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.0.1
 [1.0.0]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.0.0

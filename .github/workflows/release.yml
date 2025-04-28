@@ -79,3 +79,4 @@ jobs:
           set_changelog_version: ${{ inputs.set_changelog_version }}
           release_notes_from_changelog: ${{ inputs.release_notes_from_changelog }}
           token: ${{ steps.get_workflow_token.outputs.token }}
+          commit_message: Bump version $version [skip ci]

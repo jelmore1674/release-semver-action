@@ -48,7 +48,8 @@ async function run() {
   debug(`version: ${version}`);
 
   if (setChangelogVersion) {
-    const url = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/${gitTagPrefix}${version}`;
+    const url =
+      `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/releases/tag/${gitTagPrefix}${version}`;
     setUnreleasedChangesVersion(changelogFile, version, url, { showGitTagPrefix, gitTagPrefix });
   }
 

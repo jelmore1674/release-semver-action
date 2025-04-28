@@ -44,3 +44,4 @@ jobs:
           show_author_full_name: true
           commit_message: "Update Changelog [skip ci]"
           token: ${{ steps.get_workflow_token.outputs.token }}
+          changelog_style: common-changelog

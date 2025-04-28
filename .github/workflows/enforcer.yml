@@ -26,3 +26,4 @@ jobs:
           enable_dependabot: true
           dependabot_labels: dependencies
           comment_on_pr: true
+          show_author_full_name: true

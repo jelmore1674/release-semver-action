@@ -32,6 +32,15 @@ on:
         type: boolean
         default: true
 
+      set_changelog_version:
+        description: bump unreleased section in changelog
+        type: boolean
+        default: true
+
+      release_notes_from_changelog:
+        description: get release notes from the  changelog
+        type: boolean
+        default: true
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -67,4 +76,6 @@ jobs:
           body: ${{ steps.changelog.outputs.notes }}
           move_major_version_tag: ${{ inputs.move_major_version_tag }}
           update_package_json: ${{ inputs.update_package_json }}
+          set_changelog_version: ${{ inputs.set_changelog_version }}
+          release_notes_from_changelog: ${{ inputs.release_notes_from_changelog }}
           token: ${{ steps.get_workflow_token.outputs.token }}

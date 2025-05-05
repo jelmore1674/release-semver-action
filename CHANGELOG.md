@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased] - TBD
+
+### Security
+
+- Updates `vite` from 6.3.3 to 6.3.4 [`d99fd0a`](https://github.com/jelmore1674/release-semver-action/commit/d99fd0af54a4a827001765ccc8653085af82e276) | [#23](https://github.com/jelmore1674/release-semver-action/pull/23) | [dependabot](https://github.com/apps/dependabot)
+
 ## [1.2.2] - 2025-04-28
 
 ### Fixed

@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updates `vite` from 6.3.3 to 6.3.4 [`d99fd0a`](https://github.com/jelmore1674/release-semver-action/commit/d99fd0af54a4a827001765ccc8653085af82e276) | [#23](https://github.com/jelmore1674/release-semver-action/pull/23) | [dependabot](https://github.com/apps/dependabot)
 - Updates `@types/node` from 22.14.0 to 22.15.3 [`3989086`](https://github.com/jelmore1674/release-semver-action/commit/3989086e607bbe227d75c1691124a6cc7026859a) | [#24](https://github.com/jelmore1674/release-semver-action/pull/24) | [dependabot](https://github.com/apps/dependabot)
 - Updates `memfs` from 4.17.0 to 4.17.1 [`3989086`](https://github.com/jelmore1674/release-semver-action/commit/3989086e607bbe227d75c1691124a6cc7026859a) | [#24](https://github.com/jelmore1674/release-semver-action/pull/24) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@vitest/coverage-v8` from 3.1.2 to 3.1.3 [`b43eb59`](https://github.com/jelmore1674/release-semver-action/commit/b43eb59265a60d8024bb569b8063e1b91c466090) | [#25](https://github.com/jelmore1674/release-semver-action/pull/25) | [dependabot](https://github.com/apps/dependabot)
+- Updates `vitest` from 3.1.2 to 3.1.3 [`b43eb59`](https://github.com/jelmore1674/release-semver-action/commit/b43eb59265a60d8024bb569b8063e1b91c466090) | [#25](https://github.com/jelmore1674/release-semver-action/pull/25) | [dependabot](https://github.com/apps/dependabot)
 
 ## [1.2.2] - 2025-04-28
 

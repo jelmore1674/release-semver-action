@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - TBD
 
+### Added
+
+- Support for `auto_versioning` to let the action handle all of the semantic versioning. [`c8365d5`](https://github.com/jelmore1674/release-semver-action/commit/c8365d5e409241454ea1acfefab368a80af42046) | [#26](https://github.com/jelmore1674/release-semver-action/pull/26) | [Justin Elmore](https://github.com/jelmore1674)
+
 ### Security
 
 - Updates `vite` from 6.3.3 to 6.3.4 [`d99fd0a`](https://github.com/jelmore1674/release-semver-action/commit/d99fd0af54a4a827001765ccc8653085af82e276) | [#23](https://github.com/jelmore1674/release-semver-action/pull/23) | [dependabot](https://github.com/apps/dependabot)

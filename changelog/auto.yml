@@ -1,2 +1,0 @@
-added:
-  - Support for `auto_versioning` to let the action handle all of the semantic versioning.

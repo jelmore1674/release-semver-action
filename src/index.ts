@@ -40,7 +40,7 @@ async function run() {
     version = getLatestRelease(changelog) ?? version;
   }
 
-  if (!tagName && !autoVersioning) {
+  if (!(tagName || autoVersioning)) {
     const latestVersion = await getLatestVersion();
 
     version = inc(latestVersion, releaseType);

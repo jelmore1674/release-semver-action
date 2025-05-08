@@ -1,6 +1,6 @@
 import { debug, getBooleanInput, getInput, setFailed } from "@actions/core";
 import { context } from "@actions/github";
-import { getReleaseNotes, setUnreleasedChangesVersion } from "@jelmore1674/changelog";
+import { getLatestRelease, getReleaseNotes, setUnreleasedChangesVersion } from "@jelmore1674/changelog";
 import { commit, getValidStringInput } from "@jelmore1674/github-action-helpers";
 import { readFileSync } from "node:fs";
 import { exit } from "node:process";
@@ -16,6 +16,7 @@ async function run() {
   const setChangelogVersion = getBooleanInput("set_changelog_version", { required: false });
   const releaseNotesFromChangelog = getBooleanInput("release_notes_from_changelog", { required: false });
   const showGitTagPrefix = getBooleanInput("show_git_tag_prefix", { required: false });
+  const autoVersion = getBooleanInput("auto_version", { required: false });
 
   const token = getInput("token", { required: true });
   const tagName = getInput("tag_name", { required: false });
@@ -34,7 +35,12 @@ async function run() {
 
   let version = clean(tagName);
 
-  if (!tagName) {
+  if (autoVersion) {
+    const changelog = readFileSync("CHANGELOG.md", "utf8");
+    version = getLatestRelease(changelog) ?? version;
+  }
+
+  if (!tagName && !autoVersion) {
     const latestVersion = await getLatestVersion();
 
     version = inc(latestVersion, releaseType);
@@ -50,7 +56,12 @@ async function run() {
   if (setChangelogVersion) {
     const url =
       `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/releases/tag/${gitTagPrefix}${version}`;
-    setUnreleasedChangesVersion(changelogFile, version, url, { showGitTagPrefix, gitTagPrefix });
+    setUnreleasedChangesVersion(
+      changelogFile,
+      url,
+      { showGitTagPrefix, gitTagPrefix },
+      autoVersion ? undefined : version,
+    );
   }
 
   if (updatePackageJson) {

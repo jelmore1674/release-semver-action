@@ -66,6 +66,11 @@ inputs:
     description: The contents of your release. Optional, if  not set, it will generate the release notes.
     required: false
 
+  auto_version:
+    description: Auto bump
+    required: false
+    default: "false"
+
   token:
     description: The secret value from your GITHUB_TOKEN or another token to access the GitHub API. Defaults to the token at `github.token`
     required: true

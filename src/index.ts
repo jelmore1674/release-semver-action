@@ -16,7 +16,7 @@ async function run() {
   const setChangelogVersion = getBooleanInput("set_changelog_version", { required: false });
   const releaseNotesFromChangelog = getBooleanInput("release_notes_from_changelog", { required: false });
   const showGitTagPrefix = getBooleanInput("show_git_tag_prefix", { required: false });
-  const autoVersion = getBooleanInput("auto_version", { required: false });
+  const autoVersioning = getBooleanInput("auto_version", { required: false });
 
   const token = getInput("token", { required: true });
   const tagName = getInput("tag_name", { required: false });
@@ -35,12 +35,12 @@ async function run() {
 
   let version = clean(tagName);
 
-  if (autoVersion) {
+  if (autoVersioning) {
     const changelog = readFileSync("CHANGELOG.md", "utf8");
     version = getLatestRelease(changelog) ?? version;
   }
 
-  if (!tagName && !autoVersion) {
+  if (!tagName && !autoVersioning) {
     const latestVersion = await getLatestVersion();
 
     version = inc(latestVersion, releaseType);
@@ -58,9 +58,9 @@ async function run() {
       `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/releases/tag/${gitTagPrefix}${version}`;
     setUnreleasedChangesVersion(
       changelogFile,
+      version,
       url,
-      { showGitTagPrefix, gitTagPrefix },
-      autoVersion ? undefined : version,
+      { showGitTagPrefix, gitTagPrefix, autoVersioning },
     );
   }
 

@@ -67,7 +67,7 @@ inputs:
     required: false
 
   auto_version:
-    description: Auto bump
+    description: Use the latest version in the changelog as the version if there is not a date set.
     required: false
     default: "false"
 

@@ -28,7 +28,7 @@ describe("getLatestVersion", () => {
       .get(
         "/repos/jelmore1674/release-semver-action/releases/latest",
       )
-      .reply(404);
+      .reply(404, "This is an error");
 
     await expect(getLatestVersion()).rejects.toThrowError();
   });

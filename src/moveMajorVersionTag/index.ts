@@ -15,7 +15,7 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
   const rawMajorVersion = major(version);
   const majorVersion = `${gitTagPrefix}${rawMajorVersion}`;
 
-  info(`Updating the ${majorVersion} tag.`);
+  info(`🎯 Updating the ${majorVersion} tag.`);
 
   const branch = await getBranch();
   const latestCommit = await requestClient("GET /repos/{owner}/{repo}/commits/{ref}", {
@@ -23,7 +23,7 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
     ref: branch,
   });
 
-  info(`Latest SHA: ${latestCommit.data.sha}`);
+  info(`ℹ️ Latest SHA: ${latestCommit.data.sha}`);
 
   try {
     await restClient.git.updateRef({
@@ -33,9 +33,9 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
       force: true,
     });
 
-    info(`Successfully moved the tag:\n\ntag: ${majorVersion}\nsha: ${latestCommit.data.sha}`);
+    info(`🟢 Successfully moved the tag:\n\ntag: ${majorVersion}\nsha: ${latestCommit.data.sha}`);
   } catch (_error) {
-    info("Unable to update tag. Attempting to create the tag.");
+    info("🔁 Unable to update tag. Attempting to create the tag.");
 
     try {
       await restClient.git.createRef({
@@ -44,7 +44,7 @@ async function moveMajorVersionTag(version: string, gitTagPrefix: string) {
         sha: latestCommit.data.sha,
       });
     } catch (_error) {
-      setFailed(`Unable to update the ${majorVersion} tag`);
+      setFailed(`🚨 Unable to update the ${majorVersion} tag 🚨`);
       exit(1);
     }
   }

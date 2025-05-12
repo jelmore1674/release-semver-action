@@ -13,7 +13,7 @@ async function getLatestVersion() {
 
     const cleanedVersion = semver.clean(latestRelease.data.tag_name);
     if (!cleanedVersion) {
-      throw new Error("Unable to validate version.");
+      throw new Error("🚨 Unable to validate version. 🚨");
     }
 
     return cleanedVersion;
@@ -27,12 +27,12 @@ async function getLatestVersion() {
         }
       }
 
-      setFailed(errorMessage);
+      setFailed(`🚨 ${errorMessage} 🚨`);
       exit(1);
     }
   }
 
-  throw new Error("Unable to find the latest release or tag.");
+  throw new Error("🚨 Unable to find the latest release or tag. 🚨");
 }
 
 export { getLatestVersion };

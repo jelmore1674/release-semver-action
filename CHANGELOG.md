@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased] - TBD
+
+### Changed
+
+- Update logging and error messages to have emojis. [`d9c13f1`](https://github.com/jelmore1674/release-semver-action/commit/d9c13f19739c0a102dbec4019cecc6199e3a5ac1) | [#27](https://github.com/jelmore1674/release-semver-action/pull/27) | [Justin Elmore](https://github.com/jelmore1674)
+
 ## [1.3.0] - 2025-05-08
 
 ### Added

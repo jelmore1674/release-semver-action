@@ -1,4 +1,4 @@
-import { debug, getBooleanInput, getInput, setFailed } from "@actions/core";
+import { debug, endGroup, getBooleanInput, getInput, setFailed, startGroup } from "@actions/core";
 import { context } from "@actions/github";
 import { getLatestRelease, getReleaseNotes, setUnreleasedChangesVersion } from "@jelmore1674/changelog";
 import { commit, getValidStringInput } from "@jelmore1674/github-action-helpers";
@@ -33,6 +33,7 @@ async function run() {
   debug(`releaseTypeInput: ${releaseType}`);
   debug(`tagNameInput: ${tagName}`);
 
+  startGroup("🎯 Configure the release version.");
   let version = clean(tagName);
 
   if (autoVersioning) {
@@ -47,13 +48,15 @@ async function run() {
   }
 
   if (!version) {
-    setFailed("Unable to validate version.");
+    setFailed("🚨 Unable to validate version. 🚨");
     exit(1);
   }
+  endGroup();
 
   debug(`version: ${version}`);
 
   if (setChangelogVersion) {
+    startGroup(`🎯 Bump Changelog version to ${version}.`);
     const url =
       `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/releases/tag/${gitTagPrefix}${version}`;
     setUnreleasedChangesVersion(
@@ -62,25 +65,33 @@ async function run() {
       url,
       { showGitTagPrefix, gitTagPrefix, autoVersioning },
     );
+    endGroup();
   }
 
   if (updatePackageJson) {
+    startGroup(`🎯 Bump package.json version to ${version}.`);
     if (neq(version, getVersionFromPackageJson())) {
       setPackageJsonVersion(releaseType, version);
     }
+    endGroup();
   }
 
+  startGroup("🎯 Commit changes.");
   const { error } = await commit(token, commitMessage.replace("$version", version));
 
   if (error) {
-    setFailed("Unable to update.");
+    setFailed("🚨 Unable to update. 🚨");
     exit(1);
   }
+  endGroup();
 
   if (moveMajorVersion) {
+    startGroup("🎯 Move major version tag.");
     await moveMajorVersionTag(version, gitTagPrefix);
+    endGroup();
   }
 
+  startGroup("🎯 Create release.");
   let releaseNotes: string | undefined;
 
   if (releaseNotesFromChangelog) {
@@ -89,6 +100,7 @@ async function run() {
   }
 
   await createRelease(version, releaseNotes);
+  endGroup();
 }
 
 run();

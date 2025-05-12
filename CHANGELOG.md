@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - TBD
+## [1.3.1] - 2025-05-12
 
 ### Changed
 
@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updates `@vitest/coverage-v8` from 3.1.2 to 3.1.3 [`b43eb59`](https://github.com/jelmore1674/release-semver-action/commit/b43eb59265a60d8024bb569b8063e1b91c466090) | [#25](https://github.com/jelmore1674/release-semver-action/pull/25) | [dependabot](https://github.com/apps/dependabot)
 - Updates `vitest` from 3.1.2 to 3.1.3 [`b43eb59`](https://github.com/jelmore1674/release-semver-action/commit/b43eb59265a60d8024bb569b8063e1b91c466090) | [#25](https://github.com/jelmore1674/release-semver-action/pull/25) | [dependabot](https://github.com/apps/dependabot)
 
-## [1.2.2] - 2025-04-28
+## [1.2.2] - 2025-05-12
 
 ### Fixed
 
@@ -37,7 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Generated reference link to the updated version. [`08d737a`](https://github.com/jelmore1674/release-semver-action/commit/08d737a866076cd5458711bdbf8483ec5f36fe50) | [#19](https://github.com/jelmore1674/release-semver-action/pull/19) | [Justin Elmore](https://github.com/jelmore1674)
 
-## [1.2.0] - 2025-04-28
+## [1.2.0] - 2025-05-12
 
 ### Added
 
@@ -59,7 +59,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - No longer commits `package.json` as a single commit. ([#12](https://github.com/jelmore1674/release-semver-action/pull/12)) ([Justin Elmore](https://github.com/jelmore1674))
 
-## [1.0.1] - 2025-04-06
+## [1.0.1] - 2025-05-12
 
 ### Changed
 
@@ -73,6 +73,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Release_
 
+[1.3.1]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.1
 [1.3.0]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.0
 [1.2.2]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.2.2
 [1.2.1]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.2.1

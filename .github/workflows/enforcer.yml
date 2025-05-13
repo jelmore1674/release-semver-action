@@ -25,6 +25,7 @@ jobs:
           fetch-depth: 2
 
       - uses: jelmore1674/build-changelog/enforcer@v1
+        if: ${{ $(git rev-parse $(git describe --tags --abbrev=0)) == $(git rev-parse HEAD) }}
         with:
           skip_labels: ops,maintenance,docs
           enable_dependabot: true

@@ -24,6 +24,9 @@ jobs:
           ref: ${{ github.head_ref }}
           fetch-depth: 2
 
+      - name: Get tags
+        run: git fetch --tags origin
+
       - name: Get latest tag
         run: echo "LATEST_TAG_SHA=$(git rev-parse $(git describe --tags --abbrev=0)) >> GITHUB_ENV"
 

@@ -24,8 +24,11 @@ jobs:
           ref: ${{ github.head_ref }}
           fetch-depth: 2
 
+      - name: Get latest tag
+        run: echo "LATEST_TAG_SHA=$(git rev-parse $(git describe --tags --abbrev=0)) >> GITHUB_ENV"
+
       - uses: jelmore1674/build-changelog/enforcer@v1
-        if: ${{ git rev-parse $(git describe --tags --abbrev=0) == $(git rev-parse HEAD) }}
+        if: ${{ env.LATEST_TAG_SHA == github.sha }}
         with:
           skip_labels: ops,maintenance,docs
           enable_dependabot: true

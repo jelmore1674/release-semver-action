@@ -30,7 +30,7 @@ jobs:
 
   enforce-changelog:
     needs: get_latest_tag_sha
-    if: ${{ needs.get_latest_tag_sha.outputs.LATEST_TAG_SHA == "" }}
+    if: ${{ needs.get_latest_tag_sha.outputs.LATEST_TAG_SHA == '' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

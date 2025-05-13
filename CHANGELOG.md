@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.2] - TBD
+
+### Changed
+
+- Setup cron workflow to automatically create a release. [`6176bda`](https://github.com/jelmore1674/release-semver-action/commit/6176bdaa49fed57eaa49aa30d5c892957e879306) | [#29](https://github.com/jelmore1674/release-semver-action/pull/29) | [Justin Elmore](https://github.com/jelmore1674)
+
 ## [1.3.1] - 2025-05-12
 
 ### Changed
@@ -73,6 +79,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Release_
 
+[1.3.2]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.2
 [1.3.1]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.1
 [1.3.0]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.0
 [1.2.2]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.2.2

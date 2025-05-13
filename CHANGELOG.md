@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Setup cron workflow to automatically create a release. [`6176bda`](https://github.com/jelmore1674/release-semver-action/commit/6176bdaa49fed57eaa49aa30d5c892957e879306) | [#29](https://github.com/jelmore1674/release-semver-action/pull/29) | [Justin Elmore](https://github.com/jelmore1674)
 
+### Security
+
+- Updates `@actions/github` from 6.0.0 to 6.0.1 [`2776ac3`](https://github.com/jelmore1674/release-semver-action/commit/2776ac355ba2269cb7042e840fea2b86144dd315) | [#28](https://github.com/jelmore1674/release-semver-action/pull/28) | [dependabot](https://github.com/apps/dependabot)
+- Updates `semver` from 7.7.1 to 7.7.2 [`2776ac3`](https://github.com/jelmore1674/release-semver-action/commit/2776ac355ba2269cb7042e840fea2b86144dd315) | [#28](https://github.com/jelmore1674/release-semver-action/pull/28) | [dependabot](https://github.com/apps/dependabot)
+
 ## [1.3.1] - 2025-05-12
 
 ### Changed

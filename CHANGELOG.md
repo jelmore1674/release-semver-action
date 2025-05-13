@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.3.2] - TBD
+## [1.3.2] - 2025-05-13
 
 ### Changed
 
@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update logging and error messages to have emojis. [`d9c13f1`](https://github.com/jelmore1674/release-semver-action/commit/d9c13f19739c0a102dbec4019cecc6199e3a5ac1) | [#27](https://github.com/jelmore1674/release-semver-action/pull/27) | [Justin Elmore](https://github.com/jelmore1674)
 
-## [1.3.0] - 2025-05-08
+## [1.3.0] - 2025-05-13
 
 ### Added
 
@@ -42,7 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Prevent generated release notes from appearing when getting the release notes from the changelog. [`5812a15`](https://github.com/jelmore1674/release-semver-action/commit/5812a151ddb3f7811bcbe7912821fb7f453cb371) | [#20](https://github.com/jelmore1674/release-semver-action/pull/20) | [Justin Elmore](https://github.com/jelmore1674)
 
-## [1.2.1] - 2025-05-08
+## [1.2.1] - 2025-05-13
 
 ### Fixed
 
@@ -59,7 +59,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updates `typescript` from 5.8.2 to 5.8.3 ([`12d6a70`](https://github.com/jelmore1674/release-semver-action/commit/12d6a7004b93089ed5acd89297ecf7f3c68396aa)) ([#15](https://github.com/jelmore1674/release-semver-action/pull/15)) ([dependabot](https://github.com/apps/dependabot))
 
-## [1.1.0] - 2025-05-08
+## [1.1.0] - 2025-05-13
 
 ### Added
 
@@ -80,7 +80,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Support for committing delete files. ([#10](https://github.com/jelmore1674/release-semver-action/pull/10)) ([Justin Elmore](https://github.com/jelmore1674))
 
-## [1.0.0] - 2025-05-08
+## [1.0.0] - 2025-05-13
 
 _Initial Release_
 

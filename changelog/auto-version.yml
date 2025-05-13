@@ -1,0 +1,2 @@
+changed:
+  - Setup cron workflow to automatically create a release.

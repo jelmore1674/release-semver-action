@@ -2,7 +2,7 @@ name: Release
 
 on:
   schedule:
-    - cron: "20 4 * * 2"
+    - cron: "24 4 * * 2"
 
   workflow_dispatch:
     inputs:
@@ -21,30 +21,6 @@ on:
         type: string
         required: false
 
-      release_name:
-        description: The release name.
-        type: string
-        required: false
-
-      update_package_json:
-        description: Update the package.json version.
-        type: boolean
-        default: true
-
-      move_major_version_tag:
-        description: Move the major version tag.
-        type: boolean
-        default: true
-
-      set_changelog_version:
-        description: bump unreleased section in changelog
-        type: boolean
-        default: true
-
-      release_notes_from_changelog:
-        description: get release notes from the  changelog
-        type: boolean
-        default: true
 jobs:
   get_latest_tag_sha:
     runs-on: ubuntu-latest
@@ -89,10 +65,10 @@ jobs:
         with:
           auto_version: true
           tag_name: ${{ inputs.tag }}
-          release_name: ${{ inputs.release_name || inputs.tag }}
-          move_major_version_tag: ${{ inputs.move_major_version_tag }}
-          update_package_json: ${{ inputs.update_package_json }}
-          set_changelog_version: ${{ inputs.set_changelog_version }}
-          release_notes_from_changelog: ${{ inputs.release_notes_from_changelog }}
+          release_name: ${{ inputs.tag }}
+          move_major_version_tag: true
+          update_package_json: true
+          set_changelog_version: true
+          release_notes_from_changelog: true
           token: ${{ steps.get_workflow_token.outputs.token }}
           commit_message: Bump version $version [skip ci]

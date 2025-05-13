@@ -27,6 +27,8 @@ jobs:
       - name: Get tags
         run: git fetch --tags origin
 
+      - run: git tag
+
       - name: Get latest tag
         run: echo "LATEST_TAG_SHA=$(git rev-parse $(git describe --tags --abbrev=0)) >> GITHUB_ENV"
 

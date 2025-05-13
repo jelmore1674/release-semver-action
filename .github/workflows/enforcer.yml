@@ -16,7 +16,21 @@ permissions:
   pull-requests: write
 
 jobs:
+  get_latest_tag_sha:
+    runs-on: ubuntu-latest
+    outputs:
+      LATEST_TAG_SHA: ${{ steps.get_tag.outputs.LATEST_TAG_SHA }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get tags
+        run: git fetch --tags origin
+      - name: Get latest tag
+        id: get_tag
+        run: echo "LATEST_TAG_SHA=$(git tag --points-at HEAD) >> GITHUB_OUTPUT"
+
   enforce-changelog:
+    needs: get_latest_tag_sha
+    if: ${{ needs.get_latest_tag_sha.outputs.LATEST_TAG_SHA == "" }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

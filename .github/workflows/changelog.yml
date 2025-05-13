@@ -45,3 +45,4 @@ jobs:
           commit_message: "Update Changelog [skip ci]"
           token: ${{ steps.get_workflow_token.outputs.token }}
           changelog_style: common-changelog
+          auto_versioning: true

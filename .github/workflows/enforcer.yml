@@ -27,13 +27,11 @@ jobs:
       - name: Get tags
         run: git fetch --tags origin
 
-      - run: git tag
-
       - name: Get latest tag
-        run: echo "LATEST_TAG_SHA=$(git rev-parse $(git describe --tags --abbrev=0)) >> GITHUB_ENV"
+        run: echo "LATEST_TAG_SHA=$(git tag --points-at HEAD) >> GITHUB_ENV"
 
       - uses: jelmore1674/build-changelog/enforcer@v1
-        if: ${{ env.LATEST_TAG_SHA == github.sha }}
+        if: ${{ env.LATEST_TAG_SHA == '' }}
         with:
           skip_labels: ops,maintenance,docs
           enable_dependabot: true

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.3] - TBD
+
+### Security
+
+- Updates `@jelmore1674/changelog` from 1.3.0 to 1.3.1 [`5f0613b`](https://github.com/jelmore1674/release-semver-action/commit/5f0613bcaa74c47dcb02cde9acf5300f37d926e8) | [#31](https://github.com/jelmore1674/release-semver-action/pull/31) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@jelmore1674/github-action-helpers` from 0.2.1 to 0.2.2 [`5f0613b`](https://github.com/jelmore1674/release-semver-action/commit/5f0613bcaa74c47dcb02cde9acf5300f37d926e8) | [#31](https://github.com/jelmore1674/release-semver-action/pull/31) | [dependabot](https://github.com/apps/dependabot)
+
 ## [1.3.2] - 2025-05-13
 
 ### Changed
@@ -84,6 +91,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Release_
 
+[1.3.3]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.3
 [1.3.2]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.2
 [1.3.1]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.1
 [1.3.0]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.0

@@ -6,41 +6,28 @@ on:
 
   workflow_dispatch:
     inputs:
-      release_type:
-        description: The semver release type
-        type: choice
-        default: patch
-        required: true
-        options:
-          - patch
-          - minor
-          - major
-
       tag:
         description: Release Tag
         type: string
         required: false
 
 jobs:
-  get_latest_tag_sha:
+  release:
     runs-on: ubuntu-latest
-    outputs:
-      LATEST_TAG_SHA: ${{ steps.get_tag.outputs.LATEST_TAG_SHA }}
     steps:
       - uses: actions/checkout@v4
       - name: Get tags
         run: git fetch --tags origin
       - name: Get latest tag
         id: get_tag
-        run: echo "LATEST_TAG_SHA=$(git tag --points-at HEAD) >> GITHUB_OUTPUT"
-
-  release:
-    needs: get_latest_tag_sha
-    if: ${{ needs.get_latest_tag_sha.outputs.LATEST_TAG_SHA == '' }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+        run: |
+          if [[ -n $(git tag --points-at HEAD) ]]; then
+            echo "latest_tag=false" >> $GITHUB_OUTPUT
+          else
+            echo "latest_tag=true" >> $GITHUB_OUTPUT
+          fi
       - name: Load secret
+        if: ${{ steps.get_tag.outputs.latest_tag == 'true' }}
         id: load-op
         uses: 1password/load-secrets-action@v2
         with:
@@ -52,6 +39,7 @@ jobs:
           APP_ID: op://Actions/shared/APP_ID
 
       - name: Get Token
+        if: ${{ steps.get_tag.outputs.latest_tag == 'true' }}
         id: get_workflow_token
         uses: peter-murray/workflow-application-token-action@v4
         with:
@@ -61,6 +49,7 @@ jobs:
 
       - name: Create Release
         id: create_release
+        if: ${{ steps.get_tag.outputs.latest_tag == 'true' }}
         uses: ./
         with:
           auto_version: true

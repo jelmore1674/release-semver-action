@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updates `@jelmore1674/changelog` from 1.3.0 to 1.3.1 [`5f0613b`](https://github.com/jelmore1674/release-semver-action/commit/5f0613bcaa74c47dcb02cde9acf5300f37d926e8) | [#31](https://github.com/jelmore1674/release-semver-action/pull/31) | [dependabot](https://github.com/apps/dependabot)
 - Updates `@jelmore1674/github-action-helpers` from 0.2.1 to 0.2.2 [`5f0613b`](https://github.com/jelmore1674/release-semver-action/commit/5f0613bcaa74c47dcb02cde9acf5300f37d926e8) | [#31](https://github.com/jelmore1674/release-semver-action/pull/31) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@vitest/coverage-v8` from 3.1.3 to 3.1.4 [`4ac2a12`](https://github.com/jelmore1674/release-semver-action/commit/4ac2a12b1635ed6fedb2d8d979f3964d55b96ebb) | [#32](https://github.com/jelmore1674/release-semver-action/pull/32) | [dependabot](https://github.com/apps/dependabot)
+- Updates `dprint` from 0.49.1 to 0.50.0 [`4ac2a12`](https://github.com/jelmore1674/release-semver-action/commit/4ac2a12b1635ed6fedb2d8d979f3964d55b96ebb) | [#32](https://github.com/jelmore1674/release-semver-action/pull/32) | [dependabot](https://github.com/apps/dependabot)
+- Updates `memfs` from 4.17.1 to 4.17.2 [`4ac2a12`](https://github.com/jelmore1674/release-semver-action/commit/4ac2a12b1635ed6fedb2d8d979f3964d55b96ebb) | [#32](https://github.com/jelmore1674/release-semver-action/pull/32) | [dependabot](https://github.com/apps/dependabot)
+- Updates `vitest` from 3.1.3 to 3.1.4 [`4ac2a12`](https://github.com/jelmore1674/release-semver-action/commit/4ac2a12b1635ed6fedb2d8d979f3964d55b96ebb) | [#32](https://github.com/jelmore1674/release-semver-action/pull/32) | [dependabot](https://github.com/apps/dependabot)
 
 ## [1.3.2] - 2025-05-13
 

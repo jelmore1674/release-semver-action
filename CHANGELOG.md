@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updates `memfs` from 4.17.1 to 4.17.2 [`4ac2a12`](https://github.com/jelmore1674/release-semver-action/commit/4ac2a12b1635ed6fedb2d8d979f3964d55b96ebb) | [#32](https://github.com/jelmore1674/release-semver-action/pull/32) | [dependabot](https://github.com/apps/dependabot)
 - Updates `vitest` from 3.1.3 to 3.1.4 [`4ac2a12`](https://github.com/jelmore1674/release-semver-action/commit/4ac2a12b1635ed6fedb2d8d979f3964d55b96ebb) | [#32](https://github.com/jelmore1674/release-semver-action/pull/32) | [dependabot](https://github.com/apps/dependabot)
 
-## [1.3.2] - 2025-05-13
+## [1.3.2] - 2025-05-12
 
 ### Changed
 
@@ -33,13 +33,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updates `@actions/github` from 6.0.0 to 6.0.1 [`2776ac3`](https://github.com/jelmore1674/release-semver-action/commit/2776ac355ba2269cb7042e840fea2b86144dd315) | [#28](https://github.com/jelmore1674/release-semver-action/pull/28) | [dependabot](https://github.com/apps/dependabot)
 - Updates `semver` from 7.7.1 to 7.7.2 [`2776ac3`](https://github.com/jelmore1674/release-semver-action/commit/2776ac355ba2269cb7042e840fea2b86144dd315) | [#28](https://github.com/jelmore1674/release-semver-action/pull/28) | [dependabot](https://github.com/apps/dependabot)
 
-## [1.3.1] - 2025-05-27
+## [1.3.1] - 2025-05-12
 
 ### Changed
 
 - Update logging and error messages to have emojis. [`d9c13f1`](https://github.com/jelmore1674/release-semver-action/commit/d9c13f19739c0a102dbec4019cecc6199e3a5ac1) | [#27](https://github.com/jelmore1674/release-semver-action/pull/27) | [Justin Elmore](https://github.com/jelmore1674)
 
-## [1.3.0] - 2025-05-13
+## [1.3.0] - 2025-05-07
 
 ### Added
 
@@ -53,19 +53,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updates `@vitest/coverage-v8` from 3.1.2 to 3.1.3 [`b43eb59`](https://github.com/jelmore1674/release-semver-action/commit/b43eb59265a60d8024bb569b8063e1b91c466090) | [#25](https://github.com/jelmore1674/release-semver-action/pull/25) | [dependabot](https://github.com/apps/dependabot)
 - Updates `vitest` from 3.1.2 to 3.1.3 [`b43eb59`](https://github.com/jelmore1674/release-semver-action/commit/b43eb59265a60d8024bb569b8063e1b91c466090) | [#25](https://github.com/jelmore1674/release-semver-action/pull/25) | [dependabot](https://github.com/apps/dependabot)
 
-## [1.2.2] - 2025-05-27
+## [1.2.2] - 2025-04-28
 
 ### Fixed
 
 - Prevent generated release notes from appearing when getting the release notes from the changelog. [`5812a15`](https://github.com/jelmore1674/release-semver-action/commit/5812a151ddb3f7811bcbe7912821fb7f453cb371) | [#20](https://github.com/jelmore1674/release-semver-action/pull/20) | [Justin Elmore](https://github.com/jelmore1674)
 
-## [1.2.1] - 2025-05-13
+## [1.2.1] - 2025-04-28
 
 ### Fixed
 
 - Generated reference link to the updated version. [`08d737a`](https://github.com/jelmore1674/release-semver-action/commit/08d737a866076cd5458711bdbf8483ec5f36fe50) | [#19](https://github.com/jelmore1674/release-semver-action/pull/19) | [Justin Elmore](https://github.com/jelmore1674)
 
-## [1.2.0] - 2025-05-27
+## [1.2.0] - 2025-04-28
 
 ### Added
 
@@ -76,7 +76,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updates `typescript` from 5.8.2 to 5.8.3 ([`12d6a70`](https://github.com/jelmore1674/release-semver-action/commit/12d6a7004b93089ed5acd89297ecf7f3c68396aa)) ([#15](https://github.com/jelmore1674/release-semver-action/pull/15)) ([dependabot](https://github.com/apps/dependabot))
 
-## [1.1.0] - 2025-05-13
+## [1.1.0] - 2025-04-11
 
 ### Added
 
@@ -87,7 +87,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - No longer commits `package.json` as a single commit. ([#12](https://github.com/jelmore1674/release-semver-action/pull/12)) ([Justin Elmore](https://github.com/jelmore1674))
 
-## [1.0.1] - 2025-05-27
+## [1.0.1] - 2025-04-06
 
 ### Changed
 
@@ -97,9 +97,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Support for committing delete files. ([#10](https://github.com/jelmore1674/release-semver-action/pull/10)) ([Justin Elmore](https://github.com/jelmore1674))
 
-## [1.0.0] - 2025-05-13
+## [1.0.0] - 2025-04-05
 
 _Initial Release_
+
 
 [1.3.4]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.4
 [1.3.3]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.3

@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.3.4] - TBD
 
+### Changed
+
+- Bumped `@jelmore1674/changelog` package. [`21e1112`](https://github.com/jelmore1674/release-semver-action/commit/21e1112a208597819afe3bc417e72d7725b2fe22) | [#34](https://github.com/jelmore1674/release-semver-action/pull/34) | [Justin Elmore](https://github.com/jelmore1674)
+
+### Fixed
+
+- Fix issue where changelog dates are being changed on releases. [`21e1112`](https://github.com/jelmore1674/release-semver-action/commit/21e1112a208597819afe3bc417e72d7725b2fe22) | [#34](https://github.com/jelmore1674/release-semver-action/pull/34) | [Justin Elmore](https://github.com/jelmore1674)
+
 ### Security
 
 - Updates `@jelmore1674/changelog` from 1.3.1 to 1.3.2 [`3379bda`](https://github.com/jelmore1674/release-semver-action/commit/3379bdad17778f52adf96b4e2ac74346fb3de22a) | [#33](https://github.com/jelmore1674/release-semver-action/pull/33) | [dependabot](https://github.com/apps/dependabot)
@@ -100,7 +108,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2025-04-05
 
 _Initial Release_
-
 
 [1.3.4]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.4
 [1.3.3]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.3

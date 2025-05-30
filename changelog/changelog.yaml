@@ -1,5 +1,0 @@
-fixed:
-  - Fix issue where changelog dates are being changed on releases.
-
-changed:
-  - Bumped `@jelmore1674/changelog` package.

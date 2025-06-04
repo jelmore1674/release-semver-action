@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.5] - TBD
+
+### Security
+
+- Updates `@vitest/coverage-v8` from 3.1.4 to 3.2.0 [`6803f7f`](https://github.com/jelmore1674/release-semver-action/commit/6803f7ffb6b2c0e4ab960ab6c10e21652ffff605) | [#35](https://github.com/jelmore1674/release-semver-action/pull/35) | [dependabot](https://github.com/apps/dependabot)
+- Updates `nock` from 14.0.4 to 14.0.5 [`6803f7f`](https://github.com/jelmore1674/release-semver-action/commit/6803f7ffb6b2c0e4ab960ab6c10e21652ffff605) | [#35](https://github.com/jelmore1674/release-semver-action/pull/35) | [dependabot](https://github.com/apps/dependabot)
+- Updates `vitest` from 3.1.4 to 3.2.0 [`6803f7f`](https://github.com/jelmore1674/release-semver-action/commit/6803f7ffb6b2c0e4ab960ab6c10e21652ffff605) | [#35](https://github.com/jelmore1674/release-semver-action/pull/35) | [dependabot](https://github.com/apps/dependabot)
+
 ## [1.3.4] - 2025-05-30
 
 ### Changed
@@ -109,6 +117,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Release_
 
+[1.3.5]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.5
 [1.3.4]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.4
 [1.3.3]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.3
 [1.3.2]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.2

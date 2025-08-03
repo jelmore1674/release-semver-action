@@ -1,4 +1,3 @@
-// biome-ignore lint/style/noNamespaceImport: Mocking
 import * as actionsCore from "@actions/core";
 import nock from "nock";
 import process from "node:process";
@@ -23,9 +22,7 @@ describe("createRelease", () => {
       )
       .reply(201, {
         id: 1,
-        // biome-ignore lint/style/useNamingConvention: api
         html_url: "https://github.com/jelmore1674/release-semver-action/releases/v1.0.0",
-        // biome-ignore lint/style/useNamingConvention: api
         upload_url: "https://uploads.github.com",
       });
 

@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updates `@jelmore1674/changelog` from 1.3.3 to 1.3.4 [`4989821`](https://github.com/jelmore1674/release-semver-action/commit/49898210fc9e32495d3abe24ad136226341bda04) | [#37](https://github.com/jelmore1674/release-semver-action/pull/37) | [dependabot](https://github.com/apps/dependabot)
 - Updates `@jelmore1674/github-action-helpers` from 0.2.4 to 0.2.5 [`4989821`](https://github.com/jelmore1674/release-semver-action/commit/49898210fc9e32495d3abe24ad136226341bda04) | [#37](https://github.com/jelmore1674/release-semver-action/pull/37) | [dependabot](https://github.com/apps/dependabot)
+- Updates `brace-expansion` from 2.0.1 to 2.0.2 [`3910d51`](https://github.com/jelmore1674/release-semver-action/commit/3910d512e6624a5d466ece39dfed7ad2e0ebda5c) | [#38](https://github.com/jelmore1674/release-semver-action/pull/38) | [dependabot](https://github.com/apps/dependabot)
 
 ## [1.3.5] - 2025-06-10
 

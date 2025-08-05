@@ -1,0 +1,4 @@
+author: dependabot
+security:
+  - Updates `@types/node` from 24.1.0 to 24.2.0
+  - Updates `memfs` from 4.35.0 to 4.36.0

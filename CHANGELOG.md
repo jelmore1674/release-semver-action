@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updates `@jelmore1674/changelog` from 1.3.6 to 1.3.7 [`39ebadd`](https://github.com/jelmore1674/release-semver-action/commit/39ebaddb821a7a7978da322522a37d891c685172) | [#47](https://github.com/jelmore1674/release-semver-action/pull/47) | [dependabot](https://github.com/apps/dependabot)
 - Updates `@jelmore1674/github-action-helpers` from 0.2.6 to 0.2.7 [`39ebadd`](https://github.com/jelmore1674/release-semver-action/commit/39ebaddb821a7a7978da322522a37d891c685172) | [#47](https://github.com/jelmore1674/release-semver-action/pull/47) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@biomejs/biome` from 2.1.3 to 2.1.4 [`62b9493`](https://github.com/jelmore1674/release-semver-action/commit/62b94933e2de98765f526b5861c6f55e9feea766) | [#46](https://github.com/jelmore1674/release-semver-action/pull/46) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@types/node` from 24.1.0 to 24.2.1 [`62b9493`](https://github.com/jelmore1674/release-semver-action/commit/62b94933e2de98765f526b5861c6f55e9feea766) | [#46](https://github.com/jelmore1674/release-semver-action/pull/46) | [dependabot](https://github.com/apps/dependabot)
+- Updates `memfs` from 4.35.0 to 4.36.0 [`62b9493`](https://github.com/jelmore1674/release-semver-action/commit/62b94933e2de98765f526b5861c6f55e9feea766) | [#46](https://github.com/jelmore1674/release-semver-action/pull/46) | [dependabot](https://github.com/apps/dependabot)
+- Updates `nock` from 14.0.8 to 14.0.9 [`62b9493`](https://github.com/jelmore1674/release-semver-action/commit/62b94933e2de98765f526b5861c6f55e9feea766) | [#46](https://github.com/jelmore1674/release-semver-action/pull/46) | [dependabot](https://github.com/apps/dependabot)
 
 ## [1.3.6] - 2025-08-05
 

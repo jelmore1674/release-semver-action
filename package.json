@@ -17,8 +17,8 @@
     "@actions/core": "^1.11.1",
     "@actions/exec": "^1.1.1",
     "@actions/github": "^6.0.1",
-    "@jelmore1674/changelog": "^1.3.7",
-    "@jelmore1674/github-action-helpers": "^0.2.7",
+    "@jelmore1674/changelog": "^1.3.8",
+    "@jelmore1674/github-action-helpers": "^0.2.8",
     "semver": "^7.7.2"
   },
   "devDependencies": {

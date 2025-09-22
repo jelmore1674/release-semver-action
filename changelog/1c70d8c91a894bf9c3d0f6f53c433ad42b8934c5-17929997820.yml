@@ -1,0 +1,8 @@
+author: dependabot
+security:
+  - Updates `@biomejs/biome` from 2.1.4 to 2.2.4
+  - Updates `@types/node` from 24.2.1 to 24.5.2
+  - Updates `@types/semver` from 7.7.0 to 7.7.1
+  - Updates `@vercel/ncc` from 0.38.3 to 0.38.4
+  - Updates `dprint` from 0.50.1 to 0.50.2
+  - Updates `memfs` from 4.36.0 to 4.43.0

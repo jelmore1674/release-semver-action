@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updates `@vercel/ncc` from 0.38.3 to 0.38.4 [`fd5a5c1`](https://github.com/jelmore1674/release-semver-action/commit/fd5a5c14fe99271b5610000fc84d0e8f33996a28) | [#52](https://github.com/jelmore1674/release-semver-action/pull/52) | [dependabot](https://github.com/apps/dependabot)
 - Updates `dprint` from 0.50.1 to 0.50.2 [`fd5a5c1`](https://github.com/jelmore1674/release-semver-action/commit/fd5a5c14fe99271b5610000fc84d0e8f33996a28) | [#52](https://github.com/jelmore1674/release-semver-action/pull/52) | [dependabot](https://github.com/apps/dependabot)
 - Updates `memfs` from 4.36.0 to 4.43.0 [`fd5a5c1`](https://github.com/jelmore1674/release-semver-action/commit/fd5a5c14fe99271b5610000fc84d0e8f33996a28) | [#52](https://github.com/jelmore1674/release-semver-action/pull/52) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@jelmore1674/changelog` from 1.3.7 to 1.3.8 [`9d393d6`](https://github.com/jelmore1674/release-semver-action/commit/9d393d6f2888d4a981c0b0bbb0e4619c9f0eff5a) | [#49](https://github.com/jelmore1674/release-semver-action/pull/49) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@jelmore1674/github-action-helpers` from 0.2.7 to 0.2.8 [`9d393d6`](https://github.com/jelmore1674/release-semver-action/commit/9d393d6f2888d4a981c0b0bbb0e4619c9f0eff5a) | [#49](https://github.com/jelmore1674/release-semver-action/pull/49) | [dependabot](https://github.com/apps/dependabot)
 
 ## [1.3.7] - 2025-08-19
 

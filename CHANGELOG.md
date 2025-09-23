@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 - Updates `vite` from 7.0.6 to 7.1.5 [`68f9a4b`](https://github.com/jelmore1674/release-semver-action/commit/68f9a4b45a01e7f9813b12da5915507f07808043) | [#51](https://github.com/jelmore1674/release-semver-action/pull/51) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@biomejs/biome` from 2.1.4 to 2.2.4 [`fd5a5c1`](https://github.com/jelmore1674/release-semver-action/commit/fd5a5c14fe99271b5610000fc84d0e8f33996a28) | [#52](https://github.com/jelmore1674/release-semver-action/pull/52) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@types/node` from 24.2.1 to 24.5.2 [`fd5a5c1`](https://github.com/jelmore1674/release-semver-action/commit/fd5a5c14fe99271b5610000fc84d0e8f33996a28) | [#52](https://github.com/jelmore1674/release-semver-action/pull/52) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@types/semver` from 7.7.0 to 7.7.1 [`fd5a5c1`](https://github.com/jelmore1674/release-semver-action/commit/fd5a5c14fe99271b5610000fc84d0e8f33996a28) | [#52](https://github.com/jelmore1674/release-semver-action/pull/52) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@vercel/ncc` from 0.38.3 to 0.38.4 [`fd5a5c1`](https://github.com/jelmore1674/release-semver-action/commit/fd5a5c14fe99271b5610000fc84d0e8f33996a28) | [#52](https://github.com/jelmore1674/release-semver-action/pull/52) | [dependabot](https://github.com/apps/dependabot)
+- Updates `dprint` from 0.50.1 to 0.50.2 [`fd5a5c1`](https://github.com/jelmore1674/release-semver-action/commit/fd5a5c14fe99271b5610000fc84d0e8f33996a28) | [#52](https://github.com/jelmore1674/release-semver-action/pull/52) | [dependabot](https://github.com/apps/dependabot)
+- Updates `memfs` from 4.36.0 to 4.43.0 [`fd5a5c1`](https://github.com/jelmore1674/release-semver-action/commit/fd5a5c14fe99271b5610000fc84d0e8f33996a28) | [#52](https://github.com/jelmore1674/release-semver-action/pull/52) | [dependabot](https://github.com/apps/dependabot)
 
 ## [1.3.7] - 2025-08-19
 

@@ -1,0 +1,6 @@
+author: dependabot
+security:
+  - Updates `@biomejs/biome` from 2.2.4 to 2.2.5
+  - Updates `@types/node` from 24.5.2 to 24.7.0
+  - Updates `memfs` from 4.43.0 to 4.49.0
+  - Updates `typescript` from 5.9.2 to 5.9.3

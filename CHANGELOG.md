@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updates `@types/node` from 24.5.2 to 24.7.0 [`8309dc5`](https://github.com/jelmore1674/release-semver-action/commit/8309dc50953e1d947611066a0c124c8e3a4bd8c8) | [#55](https://github.com/jelmore1674/release-semver-action/pull/55) | [dependabot](https://github.com/apps/dependabot)
 - Updates `memfs` from 4.43.0 to 4.49.0 [`8309dc5`](https://github.com/jelmore1674/release-semver-action/commit/8309dc50953e1d947611066a0c124c8e3a4bd8c8) | [#55](https://github.com/jelmore1674/release-semver-action/pull/55) | [dependabot](https://github.com/apps/dependabot)
 - Updates `typescript` from 5.9.2 to 5.9.3 [`8309dc5`](https://github.com/jelmore1674/release-semver-action/commit/8309dc50953e1d947611066a0c124c8e3a4bd8c8) | [#55](https://github.com/jelmore1674/release-semver-action/pull/55) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@jelmore1674/changelog` from 1.3.8 to 1.3.9 [`2a14a78`](https://github.com/jelmore1674/release-semver-action/commit/2a14a7806299a3e16f758065906d73b86a3fca75) | [#53](https://github.com/jelmore1674/release-semver-action/pull/53) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@jelmore1674/github-action-helpers` from 0.2.8 to 0.2.9 [`2a14a78`](https://github.com/jelmore1674/release-semver-action/commit/2a14a7806299a3e16f758065906d73b86a3fca75) | [#53](https://github.com/jelmore1674/release-semver-action/pull/53) | [dependabot](https://github.com/apps/dependabot)
 
 ## [1.3.8] - 2025-09-30
 

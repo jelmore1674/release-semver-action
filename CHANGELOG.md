@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.9] - TBD
+
+### Security
+
+- Updates `@biomejs/biome` from 2.2.4 to 2.2.5 [`8309dc5`](https://github.com/jelmore1674/release-semver-action/commit/8309dc50953e1d947611066a0c124c8e3a4bd8c8) | [#55](https://github.com/jelmore1674/release-semver-action/pull/55) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@types/node` from 24.5.2 to 24.7.0 [`8309dc5`](https://github.com/jelmore1674/release-semver-action/commit/8309dc50953e1d947611066a0c124c8e3a4bd8c8) | [#55](https://github.com/jelmore1674/release-semver-action/pull/55) | [dependabot](https://github.com/apps/dependabot)
+- Updates `memfs` from 4.43.0 to 4.49.0 [`8309dc5`](https://github.com/jelmore1674/release-semver-action/commit/8309dc50953e1d947611066a0c124c8e3a4bd8c8) | [#55](https://github.com/jelmore1674/release-semver-action/pull/55) | [dependabot](https://github.com/apps/dependabot)
+- Updates `typescript` from 5.9.2 to 5.9.3 [`8309dc5`](https://github.com/jelmore1674/release-semver-action/commit/8309dc50953e1d947611066a0c124c8e3a4bd8c8) | [#55](https://github.com/jelmore1674/release-semver-action/pull/55) | [dependabot](https://github.com/apps/dependabot)
+
 ## [1.3.8] - 2025-09-30
 
 ### Security
@@ -158,6 +167,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Release_
 
+[1.3.9]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.9
 [1.3.8]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.8
 [1.3.7]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.7
 [1.3.6]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.6

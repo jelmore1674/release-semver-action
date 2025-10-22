@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updates `@jelmore1674/changelog` from 1.3.9 to 1.3.10 [`c4094fd`](https://github.com/jelmore1674/release-semver-action/commit/c4094fde29767397784bea11af36ade2068f37e0) | [#59](https://github.com/jelmore1674/release-semver-action/pull/59) | [dependabot](https://github.com/apps/dependabot)
 - Updates `@jelmore1674/github-action-helpers` from 0.2.9 to 0.2.10 [`c4094fd`](https://github.com/jelmore1674/release-semver-action/commit/c4094fde29767397784bea11af36ade2068f37e0) | [#59](https://github.com/jelmore1674/release-semver-action/pull/59) | [dependabot](https://github.com/apps/dependabot)
 - Updates `semver` from 7.7.2 to 7.7.3 [`c4094fd`](https://github.com/jelmore1674/release-semver-action/commit/c4094fde29767397784bea11af36ade2068f37e0) | [#59](https://github.com/jelmore1674/release-semver-action/pull/59) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@biomejs/biome` from 2.2.5 to 2.2.6 [`690669c`](https://github.com/jelmore1674/release-semver-action/commit/690669cd936efb214c273c2ef4f7ade3c0f9da3a) | [#60](https://github.com/jelmore1674/release-semver-action/pull/60) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@types/node` from 24.7.0 to 24.9.0 [`690669c`](https://github.com/jelmore1674/release-semver-action/commit/690669cd936efb214c273c2ef4f7ade3c0f9da3a) | [#60](https://github.com/jelmore1674/release-semver-action/pull/60) | [dependabot](https://github.com/apps/dependabot)
 
 ## [1.3.9] - 2025-10-14
 

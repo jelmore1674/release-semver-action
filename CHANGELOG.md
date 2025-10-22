@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.10] - TBD
+
+### Security
+
+- Updates `vite` from 7.1.5 to 7.1.11 [`2824dd5`](https://github.com/jelmore1674/release-semver-action/commit/2824dd50597fbe8830f861d2ebc11dd9f41a4f4b) | [#58](https://github.com/jelmore1674/release-semver-action/pull/58) | [dependabot](https://github.com/apps/dependabot)
+
 ## [1.3.9] - 2025-10-14
 
 ### Security
@@ -169,6 +175,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Release_
 
+[1.3.10]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.10
 [1.3.9]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.9
 [1.3.8]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.8
 [1.3.7]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.7

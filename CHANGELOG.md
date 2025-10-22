@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 - Updates `vite` from 7.1.5 to 7.1.11 [`2824dd5`](https://github.com/jelmore1674/release-semver-action/commit/2824dd50597fbe8830f861d2ebc11dd9f41a4f4b) | [#58](https://github.com/jelmore1674/release-semver-action/pull/58) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@jelmore1674/changelog` from 1.3.9 to 1.3.10 [`c4094fd`](https://github.com/jelmore1674/release-semver-action/commit/c4094fde29767397784bea11af36ade2068f37e0) | [#59](https://github.com/jelmore1674/release-semver-action/pull/59) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@jelmore1674/github-action-helpers` from 0.2.9 to 0.2.10 [`c4094fd`](https://github.com/jelmore1674/release-semver-action/commit/c4094fde29767397784bea11af36ade2068f37e0) | [#59](https://github.com/jelmore1674/release-semver-action/pull/59) | [dependabot](https://github.com/apps/dependabot)
+- Updates `semver` from 7.7.2 to 7.7.3 [`c4094fd`](https://github.com/jelmore1674/release-semver-action/commit/c4094fde29767397784bea11af36ade2068f37e0) | [#59](https://github.com/jelmore1674/release-semver-action/pull/59) | [dependabot](https://github.com/apps/dependabot)
 
 ## [1.3.9] - 2025-10-14
 

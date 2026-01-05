@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updates `dprint` from 0.50.2 to 0.51.1 [`a339a9f`](https://github.com/jelmore1674/release-semver-action/commit/a339a9f724ed53f41c2d0a7db64c0856bca76d59) | [#66](https://github.com/jelmore1674/release-semver-action/pull/66) | [dependabot](https://github.com/apps/dependabot)
 - Updates `memfs` from 4.49.0 to 4.51.1 [`a339a9f`](https://github.com/jelmore1674/release-semver-action/commit/a339a9f724ed53f41c2d0a7db64c0856bca76d59) | [#66](https://github.com/jelmore1674/release-semver-action/pull/66) | [dependabot](https://github.com/apps/dependabot)
 - Updates `vitest` from 3.2.4 to 4.0.16 [`a339a9f`](https://github.com/jelmore1674/release-semver-action/commit/a339a9f724ed53f41c2d0a7db64c0856bca76d59) | [#66](https://github.com/jelmore1674/release-semver-action/pull/66) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@jelmore1674/github-action-helpers` from 0.2.11 to 0.2.12 [`50714de`](https://github.com/jelmore1674/release-semver-action/commit/50714de78c3d8ff00301bee078dade4642290bda) | [#65](https://github.com/jelmore1674/release-semver-action/pull/65) | [dependabot](https://github.com/apps/dependabot)
 
 ## [1.3.12] - 2025-12-23
 

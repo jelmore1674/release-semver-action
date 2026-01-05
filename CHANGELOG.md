@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.13] - TBD
+
+### Security
+
+- Updates `@biomejs/biome` from 2.2.6 to 2.3.10 [`a339a9f`](https://github.com/jelmore1674/release-semver-action/commit/a339a9f724ed53f41c2d0a7db64c0856bca76d59) | [#66](https://github.com/jelmore1674/release-semver-action/pull/66) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@types/node` from 24.9.1 to 25.0.3 [`a339a9f`](https://github.com/jelmore1674/release-semver-action/commit/a339a9f724ed53f41c2d0a7db64c0856bca76d59) | [#66](https://github.com/jelmore1674/release-semver-action/pull/66) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@vitest/coverage-v8` from 3.2.4 to 4.0.16 [`a339a9f`](https://github.com/jelmore1674/release-semver-action/commit/a339a9f724ed53f41c2d0a7db64c0856bca76d59) | [#66](https://github.com/jelmore1674/release-semver-action/pull/66) | [dependabot](https://github.com/apps/dependabot)
+- Updates `dprint` from 0.50.2 to 0.51.1 [`a339a9f`](https://github.com/jelmore1674/release-semver-action/commit/a339a9f724ed53f41c2d0a7db64c0856bca76d59) | [#66](https://github.com/jelmore1674/release-semver-action/pull/66) | [dependabot](https://github.com/apps/dependabot)
+- Updates `memfs` from 4.49.0 to 4.51.1 [`a339a9f`](https://github.com/jelmore1674/release-semver-action/commit/a339a9f724ed53f41c2d0a7db64c0856bca76d59) | [#66](https://github.com/jelmore1674/release-semver-action/pull/66) | [dependabot](https://github.com/apps/dependabot)
+- Updates `vitest` from 3.2.4 to 4.0.16 [`a339a9f`](https://github.com/jelmore1674/release-semver-action/commit/a339a9f724ed53f41c2d0a7db64c0856bca76d59) | [#66](https://github.com/jelmore1674/release-semver-action/pull/66) | [dependabot](https://github.com/apps/dependabot)
+
 ## [1.3.12] - 2025-12-23
 
 ### Security
@@ -194,6 +205,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Release_
 
+[1.3.13]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.13
 [1.3.12]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.12
 [1.3.11]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.11
 [1.3.10]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.10

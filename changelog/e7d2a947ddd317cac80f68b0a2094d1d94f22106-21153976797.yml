@@ -1,0 +1,6 @@
+author: dependabot
+security:
+  - Updates `@biomejs/biome` from 2.3.10 to 2.3.11
+  - Updates `@vitest/coverage-v8` from 4.0.16 to 4.0.17
+  - Updates `memfs` from 4.51.1 to 4.56.2
+  - Updates `vitest` from 4.0.16 to 4.0.17

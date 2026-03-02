@@ -1,0 +1,9 @@
+author: dependabot
+security:
+  - Updates `@biomejs/biome` from 2.3.10 to 2.4.5
+  - Updates `@types/node` from 25.0.3 to 25.3.3
+  - Updates `@vitest/coverage-v8` from 4.0.16 to 4.0.18
+  - Updates `dprint` from 0.51.1 to 0.52.0
+  - Updates `memfs` from 4.51.1 to 4.56.10
+  - Updates `nock` from 14.0.10 to 14.0.11
+  - Updates `vitest` from 4.0.16 to 4.0.18

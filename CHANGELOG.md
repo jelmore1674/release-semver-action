@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updates `vitest` from 4.0.16 to 4.1.5 [`572c77b`](https://github.com/jelmore1674/release-semver-action/commit/572c77bffa3cdfffcc0a596b216a02e3a21919bb) | [#76](https://github.com/jelmore1674/release-semver-action/pull/76) | [dependabot](https://github.com/apps/dependabot)
 - Bumps [actions/checkout](https://github.com/actions/checkout) from 4 to 6. [`0952aeb`](https://github.com/jelmore1674/release-semver-action/commit/0952aeb8ccea41ed33a2356c2e9020a64c1d8f40) | [#81](https://github.com/jelmore1674/release-semver-action/pull/81) | [dependabot](https://github.com/apps/dependabot)
 - Bumps [dprint/check](https://github.com/dprint/check) from 2.2 to 2.3. [`397fb0e`](https://github.com/jelmore1674/release-semver-action/commit/397fb0e52df367ea30833d27d95997362e915d0f) | [#80](https://github.com/jelmore1674/release-semver-action/pull/80) | [dependabot](https://github.com/apps/dependabot)
+- Bumps [crazy-max/ghaction-import-gpg](https://github.com/crazy-max/ghaction-import-gpg) from 6 to 7. [`05158e5`](https://github.com/jelmore1674/release-semver-action/commit/05158e513ad8027088090fc10b8e9ace11830698) | [#79](https://github.com/jelmore1674/release-semver-action/pull/79) | [dependabot](https://github.com/apps/dependabot)
 
 ## [1.3.13] - 2026-01-06
 

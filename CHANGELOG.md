@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updates `nock` from 14.0.10 to 14.0.13 [`572c77b`](https://github.com/jelmore1674/release-semver-action/commit/572c77bffa3cdfffcc0a596b216a02e3a21919bb) | [#76](https://github.com/jelmore1674/release-semver-action/pull/76) | [dependabot](https://github.com/apps/dependabot)
 - Updates `typescript` from 5.9.3 to 6.0.3 [`572c77b`](https://github.com/jelmore1674/release-semver-action/commit/572c77bffa3cdfffcc0a596b216a02e3a21919bb) | [#76](https://github.com/jelmore1674/release-semver-action/pull/76) | [dependabot](https://github.com/apps/dependabot)
 - Updates `vitest` from 4.0.16 to 4.1.5 [`572c77b`](https://github.com/jelmore1674/release-semver-action/commit/572c77bffa3cdfffcc0a596b216a02e3a21919bb) | [#76](https://github.com/jelmore1674/release-semver-action/pull/76) | [dependabot](https://github.com/apps/dependabot)
+- Bumps [actions/checkout](https://github.com/actions/checkout) from 4 to 6. [`0952aeb`](https://github.com/jelmore1674/release-semver-action/commit/0952aeb8ccea41ed33a2356c2e9020a64c1d8f40) | [#81](https://github.com/jelmore1674/release-semver-action/pull/81) | [dependabot](https://github.com/apps/dependabot)
 
 ## [1.3.13] - 2026-01-06
 

@@ -8,6 +8,7 @@ export default defineConfig({
       INPUT_TOKEN: "token",
       INPUT_GIT_TAG_PREFIX: "v",
     },
+    pool: "vmThreads",
     environment: "node",
     include: ["./src/**/*.test.ts"],
     exclude: ["dist", "lib"],

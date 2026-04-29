@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Load secret
         id: load-op
-        uses: 1password/load-secrets-action@v2
+        uses: 1password/load-secrets-action@v4
         with:
           # Export loaded secrets as environment variables
           export-env: false
@@ -36,14 +36,14 @@ jobs:
           application_private_key: ${{ steps.load-op.outputs.GH_APP_KEY }}
           revoke_token: true
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           token: ${{ steps.get_workflow_token.outputs.token }}
 
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: "24"
           cache: "pnpm"
       - name: Install Packages.
         run: pnpm i --frozen-lockfile

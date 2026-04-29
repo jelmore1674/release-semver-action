@@ -18,11 +18,11 @@ importers:
         specifier: ^9.1.1
         version: 9.1.1
       '@jelmore1674/changelog':
-        specifier: ^1.3.13
-        version: 1.3.13
+        specifier: ^2.0.0
+        version: 2.0.0
       '@jelmore1674/github-action-helpers':
-        specifier: ^0.2.14
-        version: 0.2.14
+        specifier: ^1.0.0
+        version: 1.0.0
       semver:
         specifier: ^7.7.4
         version: 7.7.4
@@ -363,11 +363,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@jelmore1674/changelog@1.3.13':
-    resolution: {integrity: sha512-eHu9Ke3xU7Hf2CxNTbK6h70JzGbUICmzfaj0X9/gsnXqQUecAsISevB7XkfFSxFfd1J/pITz6Th7+YEoz5/q6A==}
+  '@jelmore1674/changelog@2.0.0':
+    resolution: {integrity: sha512-zaVzxu8qvfo0vYf6ukJmXG2X/pNKv5bBen8sUbrW5koH2HfsTciX6bevnWSzLrwhCkPRgN0w0QqfuiFKVjGeNg==}
 
-  '@jelmore1674/github-action-helpers@0.2.14':
-    resolution: {integrity: sha512-v3u1PZj0OVp3xLloUEZgwIPm9sysvZ4dHjcq6FzlfUgTHuQZ8hMYYmvHoAXJQD0ci5ZwFbqYYcRzD+X0dm7mtQ==}
+  '@jelmore1674/github-action-helpers@1.0.0':
+    resolution: {integrity: sha512-ayy6oPJr2A9DKn8QvJmcjrpN9lTIPkM6ZXoLEohtFsY7tlKH/aSj8u35IPPxSZSJxCIkX/VA75KQPiSIqXNPww==}
 
   '@jridgewell/resolve-uri@3.1.2':
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
@@ -1275,13 +1275,13 @@ snapshots:
   '@esbuild/win32-x64@0.27.7':
     optional: true
 
-  '@jelmore1674/changelog@1.3.13':
+  '@jelmore1674/changelog@2.0.0':
     dependencies:
       handlebars: 4.7.9
       latest-semver: 4.0.0
       semver: 7.7.4
 
-  '@jelmore1674/github-action-helpers@0.2.14':
+  '@jelmore1674/github-action-helpers@1.0.0':
     dependencies:
       '@actions/core': 3.0.1
       '@actions/exec': 3.0.0

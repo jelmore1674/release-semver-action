@@ -17,4 +17,11 @@ updates:
     ignore:
       - dependency-name: "@types/node"
         # Ignore patch updates for Node
+        versions: [">24"]
         update-types: ["version-update:semver-patch"]
+  - package-ecosystem: "github-actions"
+    # Workflow files stored in the default location of `.github/workflows`
+    # You don't need to specify `/.github/workflows` for `directory`. You can use `directory: "/"`.
+    directory: "/"
+    schedule:
+      interval: "weekly"

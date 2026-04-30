@@ -4,11 +4,11 @@ import { moveMajorVersionTag } from ".";
 
 const sha = "6dcb09b5b57875f334f61aebed695e2e4193db5e";
 
-vi.mock("@jelmore1674/github-action-helpers", async () => {
-  const actual = await vi.importActual("@jelmore1674/github-action-helpers");
+vi.mock(import("@jelmore1674/github-action-helpers"), async (importOriginal) => {
+  const actual = await importOriginal();
   return {
     ...actual,
-    getBranch: async () => "main",
+    getBranch: vi.fn(async () => "main"),
   };
 });
 
@@ -85,6 +85,6 @@ describe("moveMajorVersionTag", () => {
       )
       .reply(404);
 
-    await expect(moveMajorVersionTag("1.0.0", "v")).rejects.toThrowError();
+    await expect(moveMajorVersionTag("1.0.0", "v")).rejects.toThrow();
   });
 });

@@ -4,6 +4,8 @@ import process from "node:process";
 import { afterEach, describe, expect, test, vi } from "vitest";
 import { createRelease } from ".";
 
+vi.mock("@actions/core", { spy: true });
+
 describe("createRelease", () => {
   afterEach(() => {
     vi.resetAllMocks();

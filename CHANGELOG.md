@@ -5,7 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.3.14] - TBD
+## [2.0.0] - TBD
+
+### Changed
+
+- [Breaking 🧨] - Update node to use 24. [`6b02648`](https://github.com/jelmore1674/release-semver-action/commit/6b0264854286a4db6c0aa8c46282fe466e4b3be6) | [#77](https://github.com/jelmore1674/release-semver-action/pull/77) | [dependabot[bot]](https://github.com/apps/dependabot)
 
 ### Security
 
@@ -21,6 +25,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bumps [dprint/check](https://github.com/dprint/check) from 2.2 to 2.3. [`397fb0e`](https://github.com/jelmore1674/release-semver-action/commit/397fb0e52df367ea30833d27d95997362e915d0f) | [#80](https://github.com/jelmore1674/release-semver-action/pull/80) | [dependabot](https://github.com/apps/dependabot)
 - Bumps [crazy-max/ghaction-import-gpg](https://github.com/crazy-max/ghaction-import-gpg) from 6 to 7. [`05158e5`](https://github.com/jelmore1674/release-semver-action/commit/05158e513ad8027088090fc10b8e9ace11830698) | [#79](https://github.com/jelmore1674/release-semver-action/pull/79) | [dependabot](https://github.com/apps/dependabot)
 - Bumps [stefanzweifel/git-auto-commit-action](https://github.com/stefanzweifel/git-auto-commit-action) from 5 to 7. [`75cbcf6`](https://github.com/jelmore1674/release-semver-action/commit/75cbcf62b85747e9a994b97efb2afd5457b8e575) | [#78](https://github.com/jelmore1674/release-semver-action/pull/78) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@actions/core` from 2.0.1 to 3.0.1 [`6b02648`](https://github.com/jelmore1674/release-semver-action/commit/6b0264854286a4db6c0aa8c46282fe466e4b3be6) | [#77](https://github.com/jelmore1674/release-semver-action/pull/77) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@actions/exec` from 2.0.0 to 3.0.0 [`6b02648`](https://github.com/jelmore1674/release-semver-action/commit/6b0264854286a4db6c0aa8c46282fe466e4b3be6) | [#77](https://github.com/jelmore1674/release-semver-action/pull/77) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@actions/github` from 6.0.1 to 9.1.1 [`6b02648`](https://github.com/jelmore1674/release-semver-action/commit/6b0264854286a4db6c0aa8c46282fe466e4b3be6) | [#77](https://github.com/jelmore1674/release-semver-action/pull/77) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@jelmore1674/changelog` from 1.3.11 to 2.0.0 [`6b02648`](https://github.com/jelmore1674/release-semver-action/commit/6b0264854286a4db6c0aa8c46282fe466e4b3be6) | [#77](https://github.com/jelmore1674/release-semver-action/pull/77) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@jelmore1674/github-action-helpers` from 0.2.12 to 1.0.0 [`6b02648`](https://github.com/jelmore1674/release-semver-action/commit/6b0264854286a4db6c0aa8c46282fe466e4b3be6) | [#77](https://github.com/jelmore1674/release-semver-action/pull/77) | [dependabot](https://github.com/apps/dependabot)
+- Updates `semver` from 7.7.3 to 7.7.4 [`6b02648`](https://github.com/jelmore1674/release-semver-action/commit/6b0264854286a4db6c0aa8c46282fe466e4b3be6) | [#77](https://github.com/jelmore1674/release-semver-action/pull/77) | [dependabot](https://github.com/apps/dependabot)
 
 ## [1.3.13] - 2026-01-06
 
@@ -223,7 +233,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Release_
 
-[1.3.14]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.14
+[2.0.0]: https://github.com/jelmore1674/release-semver-action/releases/tag/v2.0.0
 [1.3.13]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.13
 [1.3.12]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.12
 [1.3.11]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.11

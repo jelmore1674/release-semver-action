@@ -1,2 +1,3 @@
 changed:
-  - Update node to use 24.
+  breaking:
+    - Update node to use 24.

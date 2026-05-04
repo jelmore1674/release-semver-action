@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "changelog/*"
+      - "build-changelog/*"
       - "**/changelog.yml"
       - "CHANGELOG.md"
 
@@ -36,7 +36,7 @@ jobs:
           token: ${{ steps.get_workflow_token.outputs.token }}
 
       - name: Generate Changelog
-        uses: jelmore1674/build-changelog@v1
+        uses: jelmore1674/build-changelog@v2
         with:
           show_author_full_name: true
           commit_message: "Update Changelog [skip ci]"

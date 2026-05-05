@@ -1,0 +1,2 @@
+changed:
+  - Update error message when no releases found to indicate a version must be set for the first release.

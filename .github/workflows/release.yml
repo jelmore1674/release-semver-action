@@ -42,7 +42,7 @@ jobs:
         uses: actions/create-github-app-token@v3
         with:
           client-id: ${{ steps.load-op.outputs.APP_ID }}
-          priate-key: ${{ steps.load-op.outputs.GH_APP_KEY }}
+          private-key: ${{ steps.load-op.outputs.GH_APP_KEY }}
 
       - name: Create Release
         id: create_release

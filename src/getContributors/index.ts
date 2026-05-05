@@ -1,5 +1,5 @@
 import { context } from "@actions/github";
-import { Endpoints } from "@octokit/types";
+import type { Endpoints } from "@octokit/types";
 import { restClient } from "../github";
 
 // Type for a commit response from the "get" method

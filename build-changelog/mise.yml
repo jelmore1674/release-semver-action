@@ -1,7 +1,0 @@
-change: minor
-
-changed:
-  - Change to the official `actions/create-github-app-token` action.
-
-added:
-  - "`mise` to the project to manage versions."

@@ -5,11 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.1] - TBD
+## [2.1.0] - TBD
 
 ### Changed
 
 - Update error message when no releases found to indicate a version must be set for the first release. [`9b48177`](https://github.com/jelmore1674/release-semver-action/commit/9b48177e53da1dcd7654a8c5b3603d4d51874661) | [#84](https://github.com/jelmore1674/release-semver-action/issues/84), [#85](https://github.com/jelmore1674/release-semver-action/pull/85) | [Justin Elmore](https://github.com/jelmore1674)
+- Change to the official `actions/create-github-app-token` action. [`4d435a9`](https://github.com/jelmore1674/release-semver-action/commit/4d435a9a390f0edb3a5f88e8e8d3a76a0ce0516a) | [#86](https://github.com/jelmore1674/release-semver-action/pull/86) | [Justin Elmore](https://github.com/jelmore1674)
+
+### Added
+
+- `mise` to the project to manage versions. [`4d435a9`](https://github.com/jelmore1674/release-semver-action/commit/4d435a9a390f0edb3a5f88e8e8d3a76a0ce0516a) | [#86](https://github.com/jelmore1674/release-semver-action/pull/86) | [Justin Elmore](https://github.com/jelmore1674)
 
 ### Security
 
@@ -243,7 +248,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Release_
 
-[2.0.1]: https://github.com/jelmore1674/release-semver-action/releases/tag/v2.0.1
+[2.1.0]: https://github.com/jelmore1674/release-semver-action/releases/tag/v2.1.0
 [2.0.0]: https://github.com/jelmore1674/release-semver-action/releases/tag/v2.0.0
 [1.3.13]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.13
 [1.3.12]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.12

@@ -32,7 +32,7 @@ async function getLatestVersion() {
     }
   }
 
-  throw new Error("🚨 Unable to find the latest release or tag. 🚨");
+  throw new Error("🚨 No releases found. 🚨\n🚨 You must manually set the version for the first release 🚨");
 }
 
 export { getLatestVersion };

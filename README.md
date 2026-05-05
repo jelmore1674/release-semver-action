@@ -114,6 +114,16 @@ inputs:
     description: The contents of your release. Optional, if  not set, it will generate the release notes.
     required: false
 
+  auto_version:
+    description: Use the latest version in the changelog as the version if there is not a date set.
+    required: false
+    default: "false"
+
+  show_contributors:
+    description: Tag contributors at bottom of release notes.
+    required: false
+    default: "true"
+
   token:
     description: The secret value from your GITHUB_TOKEN or another token to access the GitHub API. Defaults to the token at `github.token`
     required: true

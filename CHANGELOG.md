@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.1] - TBD
 
+### Changed
+
+- Update error message when no releases found to indicate a version must be set for the first release. [`9b48177`](https://github.com/jelmore1674/release-semver-action/commit/9b48177e53da1dcd7654a8c5b3603d4d51874661) | [#84](https://github.com/jelmore1674/release-semver-action/issues/84), [#85](https://github.com/jelmore1674/release-semver-action/pull/85) | [Justin Elmore](https://github.com/jelmore1674)
+
 ### Security
 
 - Bumps [jelmore1674/build-changelog](https://github.com/jelmore1674/build-changelog) from 1 to 2. [`b7ce113`](https://github.com/jelmore1674/release-semver-action/commit/b7ce1132cafa9b95484b345af388005b7ac0a098) | [#82](https://github.com/jelmore1674/release-semver-action/pull/82) | [dependabot](https://github.com/apps/dependabot)

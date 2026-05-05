@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - `mise` to the project to manage versions. [`4d435a9`](https://github.com/jelmore1674/release-semver-action/commit/4d435a9a390f0edb3a5f88e8e8d3a76a0ce0516a) | [#86](https://github.com/jelmore1674/release-semver-action/pull/86) | [Justin Elmore](https://github.com/jelmore1674)
+- Contributors to the bottom of the release notes. [`7b6599b`](https://github.com/jelmore1674/release-semver-action/commit/7b6599b0b2b72e46bbceafa1625d425da87ec4d9) | [#87](https://github.com/jelmore1674/release-semver-action/pull/87) | [Justin Elmore](https://github.com/jelmore1674)
 
 ### Security
 

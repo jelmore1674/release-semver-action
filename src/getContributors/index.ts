@@ -1,7 +1,5 @@
-import { setFailed } from "@actions/core";
 import { context } from "@actions/github";
 import { Endpoints } from "@octokit/types";
-import { exit } from "node:process";
 import { restClient } from "../github";
 
 // Type for a commit response from the "get" method

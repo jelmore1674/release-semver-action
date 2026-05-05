@@ -26,6 +26,7 @@ jobs:
           else
             echo "latest_tag=true" >> $GITHUB_OUTPUT
           fi
+
       - name: Load secret
         if: ${{ steps.get_tag.outputs.latest_tag == 'true' }}
         id: load-op
@@ -38,11 +39,10 @@ jobs:
       - name: Get Token
         if: ${{ steps.get_tag.outputs.latest_tag == 'true' }}
         id: get_workflow_token
-        uses: peter-murray/workflow-application-token-action@v4
+        uses: actions/create-github-app-token@v3
         with:
-          application_id: ${{ steps.load-op.outputs.APP_ID }}
-          application_private_key: ${{ steps.load-op.outputs.GH_APP_KEY }}
-          revoke_token: true
+          client-id: ${{ steps.load-op.outputs.APP_ID }}
+          private-key: ${{ steps.load-op.outputs.GH_APP_KEY }}
 
       - name: Create Release
         id: create_release

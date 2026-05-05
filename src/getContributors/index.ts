@@ -1,5 +1,7 @@
+import { setFailed } from "@actions/core";
 import { context } from "@actions/github";
 import { Endpoints } from "@octokit/types";
+import { exit } from "node:process";
 import { restClient } from "../github";
 
 // Type for a commit response from the "get" method
@@ -9,44 +11,49 @@ export async function getContributors() {
   let latestVersion: string | null = "";
 
   try {
-    const latestRelease = await restClient.repos.getLatestRelease({ ...context.repo });
-    latestVersion = latestRelease.data.tag_name;
-  } catch (error) {
-    // Do not error, just want to get the latest version for a comparison if it is available.
-  }
-
-  const { data: repo } = await restClient.repos.get({ ...context.repo });
-
-  let commits: Commits = [];
-
-  if (latestVersion) {
-    const { data: allCommits } = await restClient.repos.compareCommits({
-      ...context.repo,
-      base: latestVersion,
-      head: repo.default_branch,
-    });
-
-    commits = allCommits.commits;
-  } else {
-    const { data: latestCommits } = await restClient.repos.listCommits({ ...context.repo });
-    commits = latestCommits;
-  }
-
-  const contributors = commits.reduce((acc, commit) => {
-    if (commit.author?.type !== "User") {
-      return acc;
+    try {
+      const latestRelease = await restClient.repos.getLatestRelease({ ...context.repo });
+      latestVersion = latestRelease.data.tag_name;
+    } catch (_error) {
+      // Do not error, just want to get the latest version for a comparison if it is available.
     }
 
-    if (acc.includes(`@${commit.author?.login}`)) {
-      return acc;
+    const { data: repo } = await restClient.repos.get({ ...context.repo });
+
+    let commits: Commits = [];
+
+    if (latestVersion) {
+      const { data: allCommits } = await restClient.repos.compareCommits({
+        ...context.repo,
+        base: latestVersion,
+        head: repo.default_branch,
+      });
+
+      commits = allCommits.commits;
+    } else {
+      const { data: latestCommits } = await restClient.repos.listCommits({ ...context.repo });
+      commits = latestCommits;
     }
 
-    acc.push(`@${commit.author?.login}`);
-    return acc;
-  }, [] as string[]);
+    const contributors = commits.reduce((acc, commit) => {
+      if (commit.author?.type !== "User") {
+        return acc;
+      }
 
-  return contributors.length
-    ? `### Contributors
+      if (acc.includes(`@${commit.author?.login}`)) {
+        return acc;
+      }
+
+      acc.push(`@${commit.author?.login}`);
+      return acc;
+    }, [] as string[]);
+
+    return contributors.length
+      ? `### Contributors
 ${contributors.join("\n")}`
-    : "";
+      : "";
+  } catch (error) {
+    console.info(`🚨 Unable to add contributors 🚨`);
+    return "";
+  }
 }

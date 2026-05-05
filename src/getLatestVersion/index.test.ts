@@ -29,6 +29,6 @@ describe("getLatestVersion", () => {
       )
       .reply(404, "This is an error");
 
-    await expect(getLatestVersion()).rejects.toThrowError();
+    await expect(getLatestVersion()).rejects.toThrow();
   });
 });

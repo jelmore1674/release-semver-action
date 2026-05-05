@@ -50,6 +50,6 @@ describe("createRelease", () => {
       )
       .reply(404);
 
-    await expect(() => createRelease("1.0.0")).rejects.toThrowError();
+    await expect(() => createRelease("1.0.0")).rejects.toThrow();
   });
 });

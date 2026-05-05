@@ -6,6 +6,7 @@ import { readFileSync } from "node:fs";
 import { exit } from "node:process";
 import { clean, inc, neq } from "semver";
 import { createRelease } from "./createRelease";
+import { getContributors } from "./getContributors";
 import { getLatestVersion } from "./getLatestVersion";
 import { moveMajorVersionTag } from "./moveMajorVersionTag";
 import { getVersionFromPackageJson, type ReleaseType, setPackageJsonVersion } from "./npmVersion";
@@ -17,6 +18,7 @@ async function run() {
   const releaseNotesFromChangelog = getBooleanInput("release_notes_from_changelog", { required: false });
   const showGitTagPrefix = getBooleanInput("show_git_tag_prefix", { required: false });
   const autoVersioning = getBooleanInput("auto_version", { required: false });
+  const showContributors = getBooleanInput("show_contributors", { required: false });
 
   const token = getInput("token", { required: true });
   const tagName = getInput("tag_name", { required: false });
@@ -97,6 +99,11 @@ async function run() {
   if (releaseNotesFromChangelog) {
     const changelog = readFileSync(changelogFile, "utf8");
     releaseNotes = getReleaseNotes(changelog, version);
+
+    if (showContributors) {
+      const contributors = await getContributors();
+      releaseNotes = `${releaseNotes}\n${contributors}`;
+    }
   }
 
   await createRelease(version, releaseNotes);

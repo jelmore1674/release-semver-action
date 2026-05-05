@@ -52,7 +52,7 @@ export async function getContributors() {
       ? `### Contributors
 ${contributors.join("\n")}`
       : "";
-  } catch (error) {
+  } catch (_error) {
     console.info(`🚨 Unable to add contributors 🚨`);
     return "";
   }

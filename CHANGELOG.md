@@ -18,6 +18,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updates `typescript` from 6.0.3 to 7.0.2 [`3d3f93f`](https://github.com/jelmore1674/release-semver-action/commit/3d3f93f2138ac48e4bfa3f631d9b4de56cb156e6) | [#95](https://github.com/jelmore1674/release-semver-action/pull/95) | [dependabot](https://github.com/apps/dependabot)
 - Updates `vitest` from 4.1.5 to 4.1.10 [`3d3f93f`](https://github.com/jelmore1674/release-semver-action/commit/3d3f93f2138ac48e4bfa3f631d9b4de56cb156e6) | [#95](https://github.com/jelmore1674/release-semver-action/pull/95) | [dependabot](https://github.com/apps/dependabot)
 - Bumps [actions/checkout](https://github.com/actions/checkout) from 6 to 7. [`246b5b0`](https://github.com/jelmore1674/release-semver-action/commit/246b5b001e32bd6de26d6e673c3781836295585c) | [#92](https://github.com/jelmore1674/release-semver-action/pull/92) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@jelmore1674/changelog` from 2.0.0 to 2.0.3 [`718239d`](https://github.com/jelmore1674/release-semver-action/commit/718239dc386f7f0858f9019c919090585647cea4) | [#96](https://github.com/jelmore1674/release-semver-action/pull/96) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@jelmore1674/github-action-helpers` from 1.0.0 to 1.0.2 [`718239d`](https://github.com/jelmore1674/release-semver-action/commit/718239dc386f7f0858f9019c919090585647cea4) | [#96](https://github.com/jelmore1674/release-semver-action/pull/96) | [dependabot](https://github.com/apps/dependabot)
+- Updates `semver` from 7.7.4 to 7.8.5 [`718239d`](https://github.com/jelmore1674/release-semver-action/commit/718239dc386f7f0858f9019c919090585647cea4) | [#96](https://github.com/jelmore1674/release-semver-action/pull/96) | [dependabot](https://github.com/apps/dependabot)
 
 ## [2.1.0] - 2026-05-05
 

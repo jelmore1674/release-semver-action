@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1] - TBD
+
+### Security
+
+- Updates `@biomejs/biome` from 2.4.13 to 2.5.3 [`3d3f93f`](https://github.com/jelmore1674/release-semver-action/commit/3d3f93f2138ac48e4bfa3f631d9b4de56cb156e6) | [#95](https://github.com/jelmore1674/release-semver-action/pull/95) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@vercel/ncc` from 0.38.4 to 0.44.1 [`3d3f93f`](https://github.com/jelmore1674/release-semver-action/commit/3d3f93f2138ac48e4bfa3f631d9b4de56cb156e6) | [#95](https://github.com/jelmore1674/release-semver-action/pull/95) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@vitest/coverage-v8` from 4.1.5 to 4.1.10 [`3d3f93f`](https://github.com/jelmore1674/release-semver-action/commit/3d3f93f2138ac48e4bfa3f631d9b4de56cb156e6) | [#95](https://github.com/jelmore1674/release-semver-action/pull/95) | [dependabot](https://github.com/apps/dependabot)
+- Updates `dprint` from 0.54.0 to 0.55.1 [`3d3f93f`](https://github.com/jelmore1674/release-semver-action/commit/3d3f93f2138ac48e4bfa3f631d9b4de56cb156e6) | [#95](https://github.com/jelmore1674/release-semver-action/pull/95) | [dependabot](https://github.com/apps/dependabot)
+- Updates `memfs` from 4.57.2 to 4.64.0 [`3d3f93f`](https://github.com/jelmore1674/release-semver-action/commit/3d3f93f2138ac48e4bfa3f631d9b4de56cb156e6) | [#95](https://github.com/jelmore1674/release-semver-action/pull/95) | [dependabot](https://github.com/apps/dependabot)
+- Updates `nock` from 14.0.13 to 14.0.16 [`3d3f93f`](https://github.com/jelmore1674/release-semver-action/commit/3d3f93f2138ac48e4bfa3f631d9b4de56cb156e6) | [#95](https://github.com/jelmore1674/release-semver-action/pull/95) | [dependabot](https://github.com/apps/dependabot)
+- Updates `typescript` from 6.0.3 to 7.0.2 [`3d3f93f`](https://github.com/jelmore1674/release-semver-action/commit/3d3f93f2138ac48e4bfa3f631d9b4de56cb156e6) | [#95](https://github.com/jelmore1674/release-semver-action/pull/95) | [dependabot](https://github.com/apps/dependabot)
+- Updates `vitest` from 4.1.5 to 4.1.10 [`3d3f93f`](https://github.com/jelmore1674/release-semver-action/commit/3d3f93f2138ac48e4bfa3f631d9b4de56cb156e6) | [#95](https://github.com/jelmore1674/release-semver-action/pull/95) | [dependabot](https://github.com/apps/dependabot)
+
 ## [2.1.0] - 2026-05-05
 
 ### Changed
@@ -249,6 +262,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Release_
 
+[2.1.1]: https://github.com/jelmore1674/release-semver-action/releases/tag/v2.1.1
 [2.1.0]: https://github.com/jelmore1674/release-semver-action/releases/tag/v2.1.0
 [2.0.0]: https://github.com/jelmore1674/release-semver-action/releases/tag/v2.0.0
 [1.3.13]: https://github.com/jelmore1674/release-semver-action/releases/tag/v1.3.13

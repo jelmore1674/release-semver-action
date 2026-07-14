@@ -1,0 +1,5 @@
+author: dependabot
+security:
+  - Updates `@jelmore1674/changelog` from 2.0.0 to 2.0.3
+  - Updates `@jelmore1674/github-action-helpers` from 1.0.0 to 1.0.2
+  - Updates `semver` from 7.7.4 to 7.8.5

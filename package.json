@@ -22,13 +22,13 @@
     "semver": "^7.8.5"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.3",
+    "@biomejs/biome": "^2.5.4",
     "@octokit/types": "^16.0.0",
     "@types/node": "^24.12.2",
     "@types/semver": "^7.7.1",
     "@vercel/ncc": "^0.44.1",
     "@vitest/coverage-v8": "4.1.10",
-    "dprint": "^0.55.1",
+    "dprint": "^0.55.2",
     "memfs": "^4.64.0",
     "nock": "^14.0.16",
     "typescript": "^7.0.2",

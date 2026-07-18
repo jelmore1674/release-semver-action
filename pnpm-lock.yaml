@@ -18,8 +18,8 @@ importers:
         specifier: ^9.1.1
         version: 9.1.1
       '@jelmore1674/changelog':
-        specifier: ^2.0.3
-        version: 2.0.3
+        specifier: ^2.0.4
+        version: 2.0.4
       '@jelmore1674/github-action-helpers':
         specifier: ^1.0.2
         version: 1.0.2
@@ -386,8 +386,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@jelmore1674/changelog@2.0.3':
-    resolution: {integrity: sha512-ddQLknhbOSyGJwQPd7Op4ZZb62PKEtKZa+k8PMWCOiV5mgZiEbWu524oxWq+zKm3VrQULgBkXopkm12FO9CTQA==}
+  '@jelmore1674/changelog@2.0.4':
+    resolution: {integrity: sha512-iXZya6ZsgNs07P2hXZL5GHLDj9dBfkKi1sTTKEHVzZsaVj9Sg/P0yzRRGZy+91RGWqWDYy/sxGNjOnOLtTaLuA==}
 
   '@jelmore1674/github-action-helpers@1.0.2':
     resolution: {integrity: sha512-EDZCUKUzDzPUe9rBMx5/3DsRZMuZG1WaYmHSbDV5ey8RzHf3TimbNbiVpnhrfLB5ywWvwSDO1GQfGxVR7toX8Q==}
@@ -1431,7 +1431,7 @@ snapshots:
   '@esbuild/win32-x64@0.27.7':
     optional: true
 
-  '@jelmore1674/changelog@2.0.3':
+  '@jelmore1674/changelog@2.0.4':
     dependencies:
       handlebars: 4.7.9
       latest-semver: 4.0.0

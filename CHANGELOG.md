@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 - Updates `@jelmore1674/changelog` from 2.0.3 to 2.0.4 [`2f46258`](https://github.com/jelmore1674/release-semver-action/commit/2f462584a359d856db044e94ee8f3ccdf3ec5afd) | [#97](https://github.com/jelmore1674/release-semver-action/pull/97) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@biomejs/biome` from 2.5.3 to 2.5.4 [`1da42e8`](https://github.com/jelmore1674/release-semver-action/commit/1da42e838a9022677d6390903da2cd4640fbe188) | [#98](https://github.com/jelmore1674/release-semver-action/pull/98) | [dependabot](https://github.com/apps/dependabot)
+- Updates `dprint` from 0.55.1 to 0.55.2 [`1da42e8`](https://github.com/jelmore1674/release-semver-action/commit/1da42e838a9022677d6390903da2cd4640fbe188) | [#98](https://github.com/jelmore1674/release-semver-action/pull/98) | [dependabot](https://github.com/apps/dependabot)
 
 ## [2.1.1] - 2026-07-21
 

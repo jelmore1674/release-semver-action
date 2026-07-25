@@ -18,8 +18,8 @@ importers:
         specifier: ^9.1.1
         version: 9.1.1
       '@jelmore1674/changelog':
-        specifier: ^2.0.4
-        version: 2.0.4
+        specifier: ^2.0.5
+        version: 2.0.5
       '@jelmore1674/github-action-helpers':
         specifier: ^1.0.2
         version: 1.0.2
@@ -386,8 +386,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@jelmore1674/changelog@2.0.4':
-    resolution: {integrity: sha512-iXZya6ZsgNs07P2hXZL5GHLDj9dBfkKi1sTTKEHVzZsaVj9Sg/P0yzRRGZy+91RGWqWDYy/sxGNjOnOLtTaLuA==}
+  '@jelmore1674/changelog@2.0.5':
+    resolution: {integrity: sha512-VBrCgneJyfoLF4EbChH8In0IBahLwNsxa1gxQsbQMly26ymgqEHjQFia6fKO3yDldmRSVg4yKi5mrar38FN+hg==}
 
   '@jelmore1674/github-action-helpers@1.0.2':
     resolution: {integrity: sha512-EDZCUKUzDzPUe9rBMx5/3DsRZMuZG1WaYmHSbDV5ey8RzHf3TimbNbiVpnhrfLB5ywWvwSDO1GQfGxVR7toX8Q==}
@@ -1036,8 +1036,8 @@ packages:
     resolution: {integrity: sha512-RvwwcruNjI1ncT5xRakeyS9Lf8lcItv34KD+aif+VH9kduAyfYBipGh12274xtenIPZ119/R9BdTBa8gAwSh0A==}
     engines: {node: '>=12'}
 
-  postcss@8.5.19:
-    resolution: {integrity: sha512-Mz8SaolMd8nB+G13WkORcxQKHZ/NE4xXevtkJHVuG+guo9/wYKlIMTKAqGdEmYOXR2ijPjTYNHssizdaVSUNdQ==}
+  postcss@8.5.23:
+    resolution: {integrity: sha512-g50586zr4bZmwFiTlflMu8E0bDTb5I5gertgwAKmsdUlTQIhZtunzUlD1WSzwcVWPoAVpsrA6vlfCD7oXvRwgg==}
     engines: {node: ^10 || ^12 || >=14}
 
   propagate@2.0.1:
@@ -1431,7 +1431,7 @@ snapshots:
   '@esbuild/win32-x64@0.27.7':
     optional: true
 
-  '@jelmore1674/changelog@2.0.4':
+  '@jelmore1674/changelog@2.0.5':
     dependencies:
       handlebars: 4.7.9
       latest-semver: 4.0.0
@@ -2038,7 +2038,7 @@ snapshots:
 
   picomatch@4.0.5: {}
 
-  postcss@8.5.19:
+  postcss@8.5.23:
     dependencies:
       nanoid: 3.3.16
       picocolors: 1.1.1
@@ -2160,7 +2160,7 @@ snapshots:
       esbuild: 0.27.7
       fdir: 6.5.0(picomatch@4.0.5)
       picomatch: 4.0.5
-      postcss: 8.5.19
+      postcss: 8.5.23
       rollup: 4.62.2
       tinyglobby: 0.2.17
     optionalDependencies:

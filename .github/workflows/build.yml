@@ -44,7 +44,7 @@ jobs:
       - name: Lint
         run: pnpm lint
 
-      - uses: dprint/check@v2.3
+      - uses: dprint/check@v2.5
       - name: Build
         run: pnpm build
 
